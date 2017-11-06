@@ -14,3 +14,8 @@ bool AP_Zbo::deploy()
     return true;
 }
 
+void test_zbo_func(float testParam)
+{
+	testParam++;
+}
+

@@ -11,3 +11,5 @@ private:
     /// deploy - deploy the landing gear
     bool deploy();
 };
+
+void test_zbo_func(float testParam);
