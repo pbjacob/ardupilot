@@ -295,6 +295,9 @@ void Copter::fast_loop()
     if (should_log(MASK_LOG_ANY)) {
         Log_Sensor_Health();
     }
+
+    float myParam = 0.1;
+    test_zbo_func(myParam);
 }
 
 // rc_loops - reads user input from transmitter/receiver

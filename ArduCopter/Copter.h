@@ -95,7 +95,7 @@
 #include <AP_SmartRTL/AP_SmartRTL.h>
 #include <AP_WheelEncoder/AP_WheelEncoder.h>
 #include <AP_Winch/AP_Winch.h>
-
+#include <AP_Zbo/AP_Zbo.h>
 // Configuration
 #include "defines.h"
 #include "config.h"
