@@ -1,0 +1,1130 @@
+Last login: Tue Nov  7 12:25:39 on ttys000
+MacBook-Pro:~ zbo$ cd Git/ardupilot/
+MacBook-Pro:ardupilot zbo$ ./waf list | grep 'examples'
+examples/AC_PID_test
+examples/AHRS_Test
+examples/AP_BattMonitor_test
+examples/AP_Common
+examples/AP_Compass_test
+examples/AP_Declination_test
+examples/AP_Marvelmind_test
+examples/AP_Mission_test
+examples/AP_Notify_test
+examples/AP_OpticalFlow_test
+examples/AP_Parachute_test
+examples/Airspeed
+examples/AnalogIn
+examples/BARO_generic
+examples/DataFlash_AllTypes
+examples/DataFlash_test
+examples/Derivative
+examples/Filter
+examples/FlashTest
+examples/GPS_AUTO_test
+examples/GPS_UBLOX_passthrough
+examples/Hello
+examples/INS_generic
+examples/LowPassFilter
+examples/LowPassFilter2p
+examples/ModuleTest
+examples/Printf
+examples/RCInput
+examples/RCInputToRCOutput
+examples/RCOutput
+examples/RCOutput2
+examples/RC_Channel
+examples/RC_UART
+examples/RFIND_test
+examples/RPM_generic
+examples/RingBuffer
+examples/Scheduler_test
+examples/SmartRTL_test
+examples/Storage
+examples/StorageTest
+examples/ToshibaLED_test
+examples/UART_test
+examples/eulers
+examples/location
+examples/pid
+examples/polygon
+examples/rotations
+examples/routing
+examples/simple
+examples/trivial_AP_Mount
+MacBook-Pro:ardupilot zbo$ ./waf build --target examples/AHRS_Test
+Waf: Entering directory `/Users/zbo/Git/ardupilot/build/px4-v2'
+[ 5/15] Processing modules/mavlink/message_definitions/v1.0/ardupilotmega.xml
+[ 6/15] Processing uavcangen: modules/uavcan/dsdl/uavcan/CoarseOrientation.uavcan modules/uavcan/dsdl/uavcan/Timestamp.uavcan modules/uavcan/dsdl/uavcan/equipment/actuator/1010.ArrayCommand.uavcan modules/uavcan/dsdl/uavcan/equipment/actuator/1011.Status.uavcan modules/uavcan/dsdl/uavcan/equipment/actuator/Command.uavcan modules/uavcan/dsdl/uavcan/equipment/ahrs/1000.Solution.uavcan modules/uavcan/dsdl/uavcan/equipment/ahrs/1001.MagneticFieldStrength.uavcan modules/uavcan/dsdl/uavcan/equipment/ahrs/1002.MagneticFieldStrength2.uavcan modules/uavcan/dsdl/uavcan/equipment/ahrs/1003.RawIMU.uavcan modules/uavcan/dsdl/uavcan/equipment/air_data/1020.TrueAirspeed.uavcan modules/uavcan/dsdl/uavcan/equipment/air_data/1021.IndicatedAirspeed.uavcan modules/uavcan/dsdl/uavcan/equipment/air_data/1025.AngleOfAttack.uavcan modules/uavcan/dsdl/uavcan/equipment/air_data/1026.Sideslip.uavcan modules/uavcan/dsdl/uavcan/equipment/air_data/1027.RawAirData.uavcan modules/uavcan/dsdl/uavcan/equipment/air_data/1028.StaticPressure.uavcan modules/uavcan/dsdl/uavcan/equipment/air_data/1029.StaticTemperature.uavcan modules/uavcan/dsdl/uavcan/equipment/camera_gimbal/1040.AngularCommand.uavcan modules/uavcan/dsdl/uavcan/equipment/camera_gimbal/1041.GEOPOICommand.uavcan modules/uavcan/dsdl/uavcan/equipment/camera_gimbal/1044.Status.uavcan modules/uavcan/dsdl/uavcan/equipment/camera_gimbal/Mode.uavcan modules/uavcan/dsdl/uavcan/equipment/device/1110.Temperature.uavcan modules/uavcan/dsdl/uavcan/equipment/esc/1030.RawCommand.uavcan modules/uavcan/dsdl/uavcan/equipment/esc/1031.RPMCommand.uavcan modules/uavcan/dsdl/uavcan/equipment/esc/1034.Status.uavcan modules/uavcan/dsdl/uavcan/equipment/gnss/1060.Fix.uavcan modules/uavcan/dsdl/uavcan/equipment/gnss/1061.Auxiliary.uavcan modules/uavcan/dsdl/uavcan/equipment/gnss/1062.RTCMStream.uavcan modules/uavcan/dsdl/uavcan/equipment/gnss/1063.Fix2.uavcan modules/uavcan/dsdl/uavcan/equipment/gnss/ECEFPositionVelocity.uavcan modules/uavcan/dsdl/uavcan/equipment/hardpoint/1070.Command.uavcan modules/uavcan/dsdl/uavcan/equipment/hardpoint/1071.Status.uavcan modules/uavcan/dsdl/uavcan/equipment/ice/1129.FuelTankStatus.uavcan modules/uavcan/dsdl/uavcan/equipment/ice/reciprocating/1120.Status.uavcan modules/uavcan/dsdl/uavcan/equipment/ice/reciprocating/CylinderStatus.uavcan modules/uavcan/dsdl/uavcan/equipment/indication/1080.BeepCommand.uavcan modules/uavcan/dsdl/uavcan/equipment/indication/1081.LightsCommand.uavcan modules/uavcan/dsdl/uavcan/equipment/indication/RGB565.uavcan modules/uavcan/dsdl/uavcan/equipment/indication/SingleLightCommand.uavcan modules/uavcan/dsdl/uavcan/equipment/power/1090.PrimaryPowerSupplyStatus.uavcan modules/uavcan/dsdl/uavcan/equipment/power/1091.CircuitStatus.uavcan modules/uavcan/dsdl/uavcan/equipment/power/1092.BatteryInfo.uavcan modules/uavcan/dsdl/uavcan/equipment/range_sensor/1050.Measurement.uavcan modules/uavcan/dsdl/uavcan/equipment/safety/1100.ArmingStatus.uavcan modules/uavcan/dsdl/uavcan/navigation/2000.GlobalNavigationSolution.uavcan modules/uavcan/dsdl/uavcan/protocol/1.GetNodeInfo.uavcan modules/uavcan/dsdl/uavcan/protocol/2.GetDataTypeInfo.uavcan modules/uavcan/dsdl/uavcan/protocol/341.NodeStatus.uavcan modules/uavcan/dsdl/uavcan/protocol/4.GetTransportStats.uavcan modules/uavcan/dsdl/uavcan/protocol/4.GlobalTimeSync.uavcan modules/uavcan/dsdl/uavcan/protocol/5.Panic.uavcan modules/uavcan/dsdl/uavcan/protocol/5.RestartNode.uavcan modules/uavcan/dsdl/uavcan/protocol/6.AccessCommandShell.uavcan modules/uavcan/dsdl/uavcan/protocol/CANIfaceStats.uavcan modules/uavcan/dsdl/uavcan/protocol/DataTypeKind.uavcan modules/uavcan/dsdl/uavcan/protocol/HardwareVersion.uavcan modules/uavcan/dsdl/uavcan/protocol/SoftwareVersion.uavcan modules/uavcan/dsdl/uavcan/protocol/debug/16370.KeyValue.uavcan modules/uavcan/dsdl/uavcan/protocol/debug/16383.LogMessage.uavcan modules/uavcan/dsdl/uavcan/protocol/debug/LogLevel.uavcan modules/uavcan/dsdl/uavcan/protocol/dynamic_node_id/1.Allocation.uavcan modules/uavcan/dsdl/uavcan/protocol/dynamic_node_id/server/30.AppendEntries.uavcan modules/uavcan/dsdl/uavcan/protocol/dynamic_node_id/server/31.RequestVote.uavcan modules/uavcan/dsdl/uavcan/protocol/dynamic_node_id/server/390.Discovery.uavcan modules/uavcan/dsdl/uavcan/protocol/dynamic_node_id/server/Entry.uavcan modules/uavcan/dsdl/uavcan/protocol/enumeration/15.Begin.uavcan modules/uavcan/dsdl/uavcan/protocol/enumeration/380.Indication.uavcan modules/uavcan/dsdl/uavcan/protocol/file/40.BeginFirmwareUpdate.uavcan modules/uavcan/dsdl/uavcan/protocol/file/45.GetInfo.uavcan modules/uavcan/dsdl/uavcan/protocol/file/46.GetDirectoryEntryInfo.uavcan modules/uavcan/dsdl/uavcan/protocol/file/47.Delete.uavcan modules/uavcan/dsdl/uavcan/protocol/file/48.Read.uavcan modules/uavcan/dsdl/uavcan/protocol/file/49.Write.uavcan modules/uavcan/dsdl/uavcan/protocol/file/EntryType.uavcan modules/uavcan/dsdl/uavcan/protocol/file/Error.uavcan modules/uavcan/dsdl/uavcan/protocol/file/Path.uavcan modules/uavcan/dsdl/uavcan/protocol/param/10.ExecuteOpcode.uavcan modules/uavcan/dsdl/uavcan/protocol/param/11.GetSet.uavcan modules/uavcan/dsdl/uavcan/protocol/param/Empty.uavcan modules/uavcan/dsdl/uavcan/protocol/param/NumericValue.uavcan modules/uavcan/dsdl/uavcan/protocol/param/Value.uavcan
+[ 7/15] Creating build/px4-v2/ap_version.h
+[ 8/15] CMake Configure px4
+[ 9/15] PX4: Copying rc.APM to px4-extra-files/ROMFS/init.d/rc.APM
+[10/15] PX4: Copying rc.error to px4-extra-files/ROMFS/init.d/rc.error
+[11/15] PX4: Copying rcS to px4-extra-files/ROMFS/init.d/rcS
+[12/15] PX4: Copying startup to px4-extra-files/ROMFS/tones/startup
+[13/15] PX4: Copying px4fmuv2_bl.bin to px4-extra-files/ROMFS/bootloader/fmu_bl.bin
+-- nuttx-px4fmu-v2-apm
+-- could not find gdbtui
+-- could not find ddd
+-- could not find gdbtui
+-- could not find ddd
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/local/bin/arm-none-eabi-gcc
+-- Found PythonInterp: /usr/bin/python (found version "2.7.10")
+-- GIT_DESC = 0384802e81330751f39550a0804357d8b04f278a
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware
+INCLUDE_DIRS=/Users/zbo/Git/ardupilot/modules/PX4Firmware/src;/Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware;/Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware/src;/Users/zbo/Git/ardupilot/modules/PX4Firmware/src/modules;/Users/zbo/Git/ardupilot/modules/PX4Firmware/src/include;/Users/zbo/Git/ardupilot/modules/PX4Firmware/src/lib;/Users/zbo/Git/ardupilot/modules/PX4Firmware/src/platforms;/Users/zbo/Git/ardupilot/modules/PX4Firmware/src/drivers/boards/px4fmu-v2;/Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware;/Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware/src/modules/px4_messages;/Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware/src/modules;/Users/zbo/Git/ardupilot/modules/PX4Firmware/mavlink/include/mavlink;/Users/zbo/Git/ardupilot/modules/PX4Firmware/src/lib/DriverFramework/framework/include;src/lib/matrix;/Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware/px4fmu-v2/NuttX/nuttx-export/include;/Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware/px4fmu-v2/NuttX/nuttx-export/include/cxx;/Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware/px4fmu-v2/NuttX/nuttx-export/arch/chip;/Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware/px4fmu-v2/NuttX/nuttx-export/arch/common
+ADDING DRIVERS
+
+[14/15] CMake Build px4 msg_gen
+[3/4] Generating uORB topic multi headers for nuttxValidation skipped for /Users/zbo/Git/ardupilot/modules/mavlink/message_definitions/v1.0/ardupilotmega.xml.
+Parsing /Users/zbo/Git/ardupilot/modules/mavlink/message_definitions/v1.0/ardupilotmega.xml
+Note: message DATA64 is longer than 64 bytes long (74 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message DATA96 is longer than 64 bytes long (106 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message REMOTE_LOG_DATA_BLOCK is longer than 64 bytes long (214 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message DEVICE_OP_READ_REPLY is longer than 64 bytes long (143 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message DEVICE_OP_WRITE is longer than 64 bytes long (187 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Validation skipped for /Users/zbo/Git/ardupilot/modules/mavlink/message_definitions/v1.0/common.xml.
+Parsing /Users/zbo/Git/ardupilot/modules/mavlink/message_definitions/v1.0/common.xml
+Note: message GPS_STATUS is longer than 64 bytes long (109 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ATTITUDE_QUATERNION_COV is longer than 64 bytes long (80 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_POSITION_INT_COV is longer than 64 bytes long (189 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOCAL_POSITION_NED_COV is longer than 64 bytes long (233 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_ACTUATOR_CONTROLS is longer than 64 bytes long (89 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIGHRES_IMU is longer than 64 bytes long (70 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_SENSOR is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SIM_STATE is longer than 64 bytes long (92 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FILE_TRANSFER_PROTOCOL is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_STATE_QUATERNION is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOG_DATA is longer than 64 bytes long (105 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INJECT_DATA is longer than 64 bytes long (121 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_CONTROL is longer than 64 bytes long (87 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ENCAPSULATED_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message RESOURCE_REQUEST is longer than 64 bytes long (251 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FOLLOW_TARGET is longer than 64 bytes long (101 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CONTROL_SYSTEM_STATE is longer than 64 bytes long (108 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message AUTOPILOT_VERSION is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INPUT is longer than 64 bytes long (71 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_RTCM_DATA is longer than 64 bytes long (190 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message V2_EXTENSION is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CAMERA_INFORMATION is longer than 64 bytes long (94 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CAMERA_IMAGE_CAPTURED is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOGGING_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOGGING_DATA_ACKED is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Validation skipped for /Users/zbo/Git/ardupilot/modules/mavlink/message_definitions/v1.0/uAvionix.xml.
+Parsing /Users/zbo/Git/ardupilot/modules/mavlink/message_definitions/v1.0/uAvionix.xml
+Merged enum MAV_CMD
+Found 209 MAVLink message types in 3 XML files
+Generating C implementation in directory /Users/zbo/Git/ardupilot/build/px4-v2/libraries/GCS_MAVLink/include/mavlink/v2.0/ardupilotmega
+Generating C implementation in directory /Users/zbo/Git/ardupilot/build/px4-v2/libraries/GCS_MAVLink/include/mavlink/v2.0/common
+Generating C implementation in directory /Users/zbo/Git/ardupilot/build/px4-v2/libraries/GCS_MAVLink/include/mavlink/v2.0/uAvionix
+Copying fixed headers for protocol 2.0 to /Users/zbo/Git/ardupilot/build/px4-v2/libraries/GCS_MAVLink/include/mavlink/v2.0
+
+WARNING: Unable to load XML validator libraries. XML validation will not be performed
+
+[4/4] Generating uORB topic headers
+[15/15] CMake Build px4 prebuild_targets
+[2/3] Generating px4fmu-v2.export
+Configuring NuttX for px4fmu-v2
+Exporting NuttX for px4fmu-v2
+sem_timedwait.c: In function 'sem_timedwait':
+sem_timedwait.c:226:23: warning: comparison of unsigned expression < 0 is always false [-Wtype-limits]
+   if (abstime->tv_sec < 0 || abstime->tv_nsec > 1000000000)
+                       ^
+timer_settime.c:70:1: warning: 'inline' is not at beginning of declaration [-Wold-style-declaration]
+ static void inline timer_sigqueue(FAR struct posix_timer_s *timer);
+ ^
+timer_settime.c:71:1: warning: 'inline' is not at beginning of declaration [-Wold-style-declaration]
+ static void inline timer_restart(FAR struct posix_timer_s *timer, uint32_t itimer);
+ ^
+timer_settime.c:96:1: warning: 'inline' is not at beginning of declaration [-Wold-style-declaration]
+ static void inline timer_sigqueue(FAR struct posix_timer_s *timer)
+ ^
+timer_settime.c:136:1: warning: 'inline' is not at beginning of declaration [-Wold-style-declaration]
+ static void inline timer_restart(FAR struct posix_timer_s *timer, uint32_t itimer)
+ ^
+mq_timedsend.c: In function 'mq_timedsend':
+mq_timedsend.c:202:35: warning: comparison of unsigned expression < 0 is always false [-Wtype-limits]
+   if (!abstime || abstime->tv_sec < 0 || abstime->tv_nsec > 1000000000)
+                                   ^
+mq_timedreceive.c: In function 'mq_timedreceive':
+mq_timedreceive.c:201:35: warning: comparison of unsigned expression < 0 is always false [-Wtype-limits]
+   if (!abstime || abstime->tv_sec < 0 || abstime->tv_nsec > 1000000000)
+                                   ^
+In file included from stdio/lib_libvsprintf.c:230:0:
+./stdio/lib_libdtoa.c: In function 'lib_dtoa':
+./stdio/lib_libdtoa.c:153:13: warning: variable 'digalloc' set but not used [-Wunused-but-set-variable]
+   FAR char *digalloc;   /* Copy of digits to be freed after usage */
+             ^
+mm_memalign.c: In function 'mm_memalign':
+mm_memalign.c:106:14: warning: cast from function call of type 'void *' to non-matching type 'unsigned int' [-Wbad-function-cast]
+   rawchunk = (size_t)malloc(allocsize);
+              ^
+chip/stm32_allocateheap.c:364:8: warning: #warning "CCM SRAM is included in the heap AND DMA is enabled" [-Wcpp]
+ #      warning "CCM SRAM is included in the heap AND DMA is enabled"
+        ^
+chip/stm32_spi.c: In function 'spi_send':
+chip/stm32_spi.c:1242:12: warning: variable 'regval' set but not used [-Wunused-but-set-variable]
+   uint32_t regval;
+            ^
+chip/stm32_sdio.c: In function 'stm32_dmasendsetup':
+chip/stm32_sdio.c:2671:7: warning: unused variable 'ret' [-Wunused-variable]
+   int ret = -EINVAL;
+       ^
+chip/stm32_tim.c:241:13: warning: 'stm32_tim_gpioconfig' defined but not used [-Wunused-function]
+ static void stm32_tim_gpioconfig(uint32_t cfg, stm32_tim_channel_t mode)
+             ^
+chip/stm32_i2c.c: In function 'up_i2creset':
+chip/stm32_i2c.c:2085:16: warning: unused variable 'state' [-Wunused-variable]
+     irqstate_t state;
+                ^
+chip/stm32_otgfsdev.c: In function 'stm32_ep0out_testmode':
+chip/stm32_otgfsdev.c:2085:12: warning: variable 'regval' set but not used [-Wunused-but-set-variable]
+   uint32_t regval;
+            ^
+chip/stm32_otgfsdev.c: In function 'stm32_ep_cancel':
+chip/stm32_otgfsdev.c:4479:30: warning: variable 'priv' set but not used [-Wunused-but-set-variable]
+   FAR struct stm32_usbdev_s *priv;
+                              ^
+In file included from chip/stm32_rtc.c:84:0:
+chip/stm32_rtcc.c: In function 'up_rtcinitialize':
+chip/stm32_rtcc.c:600:7: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+   int ret;
+       ^
+ramdisk.c: In function 'create_ramdisk':
+ramdisk.c:116:21: warning: pointer targets in passing argument 2 of 'ramdisk_register' differ in signedness [-Wpointer-sign]
+                     pbuffer,
+                     ^
+In file included from ramdisk.c:48:0:
+/Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware/px4fmu-v2/NuttX/nuttx/include/nuttx/ramdisk.h:86:12: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ EXTERN int ramdisk_register(int minor, FAR uint8_t *buffer, uint32_t nsectors,
+            ^
+fat/fs_fat32.c: In function 'fat_unlink':
+fat/fs_fat32.c:1949:4: warning: #warning "Need to defer deleting cluster chain if the file is open" [-Wcpp]
+ #  warning "Need to defer deleting cluster chain if the file is open"
+    ^
+fat/fs_fat32.c: In function 'fat_rmdir':
+fat/fs_fat32.c:2214:4: warning: #warning "Need to defer deleting cluster chain if the directory is open" [-Wcpp]
+ #  warning "Need to defer deleting cluster chain if the directory is open"
+    ^
+mtd/ramtron.c: In function 'ramtron_readid':
+mtd/ramtron.c:361:26: warning: variable 'memory' set but not used [-Wunused-but-set-variable]
+   uint16_t manufacturer, memory, capacity, part;
+                          ^
+pipes/pipe.c:91:1: warning: missing initializer for field 'holder' of 'sem_t {aka struct sem_s}' [-Wmissing-field-initializers]
+ static sem_t  g_pipesem       = { 1 };
+ ^
+In file included from /Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware/px4fmu-v2/NuttX/nuttx/include/nuttx/fs/fs.h:49:0,
+                 from pipes/pipe.c:47:
+/Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware/px4fmu-v2/NuttX/nuttx/include/semaphore.h:97:22: note: 'holder' declared here
+   struct semholder_s holder;     /* Single holder */
+                      ^
+usbdev/cdcacm.c:245:1: warning: missing initializer for field 'onrxdeque' of 'const struct uart_ops_s' [-Wmissing-field-initializers]
+ };
+ ^
+In file included from usbdev/cdcacm.c:56:0:
+/Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware/px4fmu-v2/NuttX/nuttx/include/nuttx/serial/serial.h:191:15: note: 'onrxdeque' declared here
+   CODE void (*onrxdeque)(FAR struct uart_dev_s *dev);
+               ^
+[3/3] Generating nuttx_export_px4fmu-v2.stamp
+[ 16/833] Checking included headers libraries/AC_AttitudeControl/AC_AttitudeControl.cpp
+[ 17/833] Checking included headers libraries/AC_AttitudeControl/AC_AttitudeControl_Heli.cpp
+[ 18/833] Checking included headers libraries/AC_AttitudeControl/AC_AttitudeControl_Multi.cpp
+[ 19/833] Checking included headers libraries/AC_AttitudeControl/AC_AttitudeControl_Sub.cpp
+[ 20/833] Checking included headers libraries/AC_AttitudeControl/AC_PosControl.cpp
+[ 21/833] Checking included headers libraries/AC_AttitudeControl/AC_PosControl_Sub.cpp
+[ 22/833] Checking included headers libraries/AC_AttitudeControl/ControlMonitor.cpp
+[ 23/833] Checking included headers libraries/AC_Avoidance/AC_Avoid.cpp
+[ 24/833] Checking included headers libraries/AC_Fence/AC_Fence.cpp
+[ 25/833] Checking included headers libraries/AC_Fence/AC_PolyFence_loader.cpp
+[ 26/833] Checking included headers libraries/AC_InputManager/AC_InputManager.cpp
+[ 27/833] Checking included headers libraries/AC_InputManager/AC_InputManager_Heli.cpp
+[ 28/833] Checking included headers libraries/AC_PID/AC_HELI_PID.cpp
+[ 29/833] Checking included headers libraries/AC_PID/AC_P.cpp
+[ 30/833] Checking included headers libraries/AC_PID/AC_PID.cpp
+[ 31/833] Checking included headers libraries/AC_PID/AC_PI_2D.cpp
+[ 32/833] Checking included headers libraries/AC_PrecLand/AC_PrecLand.cpp
+[ 33/833] Checking included headers libraries/AC_PrecLand/AC_PrecLand_Companion.cpp
+[ 34/833] Checking included headers libraries/AC_PrecLand/AC_PrecLand_IRLock.cpp
+[ 35/833] Checking included headers libraries/AC_PrecLand/AC_PrecLand_SITL.cpp
+[ 36/833] Checking included headers libraries/AC_PrecLand/AC_PrecLand_SITL_Gazebo.cpp
+[ 37/833] Checking included headers libraries/AC_PrecLand/PosVelEKF.cpp
+[ 38/833] Checking included headers libraries/AC_Sprayer/AC_Sprayer.cpp
+[ 39/833] Checking included headers libraries/AC_WPNav/AC_Circle.cpp
+[ 40/833] Checking included headers libraries/AC_WPNav/AC_WPNav.cpp
+[ 41/833] Checking included headers libraries/APM_Control/AP_AutoTune.cpp
+[ 42/833] Checking included headers libraries/APM_Control/AP_PitchController.cpp
+[ 43/833] Checking included headers libraries/APM_Control/AP_RollController.cpp
+[ 44/833] Checking included headers libraries/APM_Control/AP_SteerController.cpp
+[ 45/833] Checking included headers libraries/APM_Control/AP_YawController.cpp
+[ 46/833] Checking included headers libraries/APM_Control/AR_AttitudeControl.cpp
+[ 47/833] Checking included headers libraries/AP_ADC/AP_ADC.cpp
+[ 48/833] Checking included headers libraries/AP_ADC/AP_ADC_ADS1115.cpp
+[ 49/833] Checking included headers libraries/AP_ADSB/AP_ADSB.cpp
+[ 50/833] Checking included headers libraries/AP_AHRS/AP_AHRS_DCM.cpp
+[ 51/833] Checking included headers libraries/AP_AHRS/AP_AHRS_NavEKF.cpp
+[ 52/833] Checking included headers libraries/AP_AHRS/AP_AHRS_View.cpp
+[ 53/833] Checking included headers libraries/AP_AHRS/AP_AHRS.cpp
+[ 54/833] Checking included headers libraries/AP_AccelCal/AccelCalibrator.cpp
+[ 55/833] Checking included headers libraries/AP_AccelCal/AP_AccelCal.cpp
+[ 56/833] Checking included headers libraries/AP_AdvancedFailsafe/AP_AdvancedFailsafe.cpp
+[ 57/833] Checking included headers libraries/AP_Airspeed/AP_Airspeed.cpp
+[ 58/833] Checking included headers libraries/AP_Airspeed/AP_Airspeed_Backend.cpp
+[ 59/833] Checking included headers libraries/AP_Airspeed/AP_Airspeed_MS4525.cpp
+[ 60/833] Checking included headers libraries/AP_Airspeed/AP_Airspeed_MS5525.cpp
+[ 61/833] Checking included headers libraries/AP_Airspeed/AP_Airspeed_analog.cpp
+[ 62/833] Checking included headers libraries/AP_Airspeed/Airspeed_Calibration.cpp
+[ 63/833] Checking included headers libraries/AP_Arming/AP_Arming.cpp
+[ 64/833] Checking included headers libraries/AP_Avoidance/AP_Avoidance.cpp
+[ 65/833] Checking included headers libraries/AP_Baro/AP_Baro_BMP085.cpp
+[ 66/833] Checking included headers libraries/AP_Baro/AP_Baro_BMP280.cpp
+[ 67/833] Checking included headers libraries/AP_Baro/AP_Baro_Backend.cpp
+[ 68/833] Checking included headers libraries/AP_Baro/AP_Baro_HIL.cpp
+[ 69/833] Checking included headers libraries/AP_Baro/AP_Baro_KellerLD.cpp
+[ 70/833] Checking included headers libraries/AP_Baro/AP_Baro_LPS25H.cpp
+[ 71/833] Checking included headers libraries/AP_Baro/AP_Baro_MS5611.cpp
+[ 72/833] Checking included headers libraries/AP_Baro/AP_Baro_QURT.cpp
+[ 73/833] Checking included headers libraries/AP_Baro/AP_Baro_SITL.cpp
+[ 74/833] Checking included headers libraries/AP_Baro/AP_Baro_UAVCAN.cpp
+[ 75/833] Checking included headers libraries/AP_Baro/AP_Baro_qflight.cpp
+[ 76/833] Checking included headers libraries/AP_Baro/AP_Baro.cpp
+[ 77/833] Checking included headers libraries/AP_BattMonitor/AP_BattMonitor_Analog.cpp
+[ 78/833] Checking included headers libraries/AP_BattMonitor/AP_BattMonitor_Backend.cpp
+[ 79/833] Checking included headers libraries/AP_BattMonitor/AP_BattMonitor_Bebop.cpp
+[ 80/833] Checking included headers libraries/AP_BattMonitor/AP_BattMonitor_SMBus.cpp
+[ 81/833] Checking included headers libraries/AP_BattMonitor/AP_BattMonitor_SMBus_Maxell.cpp
+[ 82/833] Checking included headers libraries/AP_BattMonitor/AP_BattMonitor_SMBus_Solo.cpp
+[ 83/833] Checking included headers libraries/AP_BattMonitor/AP_BattMonitor.cpp
+[ 84/833] Checking included headers libraries/AP_Beacon/AP_Beacon.cpp
+[ 85/833] Checking included headers libraries/AP_Beacon/AP_Beacon_Backend.cpp
+[ 86/833] Checking included headers libraries/AP_Beacon/AP_Beacon_Marvelmind.cpp
+[ 87/833] Checking included headers libraries/AP_Beacon/AP_Beacon_Pozyx.cpp
+[ 88/833] Checking included headers libraries/AP_Beacon/AP_Beacon_SITL.cpp
+[ 89/833] Checking included headers libraries/AP_BoardConfig/AP_BoardConfig.cpp
+[ 90/833] Checking included headers libraries/AP_BoardConfig/AP_BoardConfig_CAN.cpp
+[ 91/833] Checking included headers libraries/AP_BoardConfig/canbus.cpp
+[ 92/833] Checking included headers libraries/AP_BoardConfig/px4_drivers.cpp
+[ 93/833] Checking included headers libraries/AP_Button/AP_Button.cpp
+[ 94/833] Checking included headers libraries/AP_Camera/AP_Camera.cpp
+[ 95/833] Checking included headers libraries/AP_Common/AP_Common.cpp
+[ 96/833] Checking included headers libraries/AP_Common/Location.cpp
+[ 97/833] Checking included headers libraries/AP_Common/c++.cpp
+[ 98/833] Checking included headers libraries/AP_Compass/AP_Compass_AK09916.cpp
+[ 99/833] Checking included headers libraries/AP_Compass/AP_Compass_AK8963.cpp
+[100/833] Checking included headers libraries/AP_Compass/AP_Compass_BMM150.cpp
+[101/833] Checking included headers libraries/AP_Compass/AP_Compass_Backend.cpp
+[102/833] Checking included headers libraries/AP_Compass/AP_Compass_Calibration.cpp
+[103/833] Checking included headers libraries/AP_Compass/AP_Compass_HIL.cpp
+[104/833] Checking included headers libraries/AP_Compass/AP_Compass_HMC5843.cpp
+[105/833] Checking included headers libraries/AP_Compass/AP_Compass_IST8310.cpp
+[106/833] Checking included headers libraries/AP_Compass/AP_Compass_LIS3MDL.cpp
+[107/833] Checking included headers libraries/AP_Compass/AP_Compass_LSM303D.cpp
+[108/833] Checking included headers libraries/AP_Compass/AP_Compass_LSM9DS1.cpp
+[109/833] Checking included headers libraries/AP_Compass/AP_Compass_MMC3416.cpp
+[110/833] Checking included headers libraries/AP_Compass/AP_Compass_QMC5883L.cpp
+[111/833] Checking included headers libraries/AP_Compass/AP_Compass_QURT.cpp
+[112/833] Checking included headers libraries/AP_Compass/AP_Compass_SITL.cpp
+[113/833] Checking included headers libraries/AP_Compass/AP_Compass_UAVCAN.cpp
+[114/833] Checking included headers libraries/AP_Compass/AP_Compass_qflight.cpp
+[115/833] Checking included headers libraries/AP_Compass/CompassCalibrator.cpp
+[116/833] Checking included headers libraries/AP_Compass/Compass_learn.cpp
+[117/833] Checking included headers libraries/AP_Compass/AP_Compass.cpp
+[118/833] Checking included headers libraries/AP_Declination/AP_Declination.cpp
+[119/833] Checking included headers libraries/AP_FlashStorage/AP_FlashStorage.cpp
+[120/833] Checking included headers libraries/AP_Frsky_Telem/AP_Frsky_Telem.cpp
+[121/833] Checking included headers libraries/AP_GPS/AP_GPS.cpp
+[122/833] Checking included headers libraries/AP_GPS/AP_GPS_ERB.cpp
+[123/833] Checking included headers libraries/AP_GPS/AP_GPS_GSOF.cpp
+[124/833] Checking included headers libraries/AP_GPS/AP_GPS_MAV.cpp
+[125/833] Checking included headers libraries/AP_GPS/AP_GPS_MTK.cpp
+[126/833] Checking included headers libraries/AP_GPS/AP_GPS_MTK19.cpp
+[127/833] Checking included headers libraries/AP_GPS/AP_GPS_NMEA.cpp
+[128/833] Checking included headers libraries/AP_GPS/AP_GPS_NOVA.cpp
+[129/833] Checking included headers libraries/AP_GPS/AP_GPS_QURT.cpp
+[130/833] Checking included headers libraries/AP_GPS/AP_GPS_SBF.cpp
+[131/833] Checking included headers libraries/AP_GPS/AP_GPS_SBP.cpp
+[132/833] Checking included headers libraries/AP_GPS/AP_GPS_SBP2.cpp
+[133/833] Checking included headers libraries/AP_GPS/AP_GPS_SIRF.cpp
+[134/833] Checking included headers libraries/AP_GPS/AP_GPS_UAVCAN.cpp
+[135/833] Checking included headers libraries/AP_GPS/AP_GPS_UBLOX.cpp
+[136/833] Checking included headers libraries/AP_GPS/GPS_Backend.cpp
+[137/833] Checking included headers libraries/AP_Gripper/AP_Gripper.cpp
+[138/833] Checking included headers libraries/AP_Gripper/AP_Gripper_Backend.cpp
+[139/833] Checking included headers libraries/AP_Gripper/AP_Gripper_EPM.cpp
+[140/833] Checking included headers libraries/AP_Gripper/AP_Gripper_Servo.cpp
+[141/833] Checking included headers libraries/AP_ICEngine/AP_ICEngine.cpp
+[142/833] Checking included headers libraries/AP_IRLock/AP_IRLock_I2C.cpp
+[143/833] Checking included headers libraries/AP_IRLock/AP_IRLock_SITL.cpp
+[144/833] Checking included headers libraries/AP_IRLock/IRLock.cpp
+[145/833] Checking included headers libraries/AP_InertialNav/AP_InertialNav_NavEKF.cpp
+[146/833] Checking included headers libraries/AP_InertialSensor/AP_InertialSensor_BMI160.cpp
+[147/833] Checking included headers libraries/AP_InertialSensor/AP_InertialSensor_Backend.cpp
+[148/833] Checking included headers libraries/AP_InertialSensor/AP_InertialSensor_HIL.cpp
+[149/833] Checking included headers libraries/AP_InertialSensor/AP_InertialSensor_Invensense.cpp
+[150/833] Checking included headers libraries/AP_InertialSensor/AP_InertialSensor_L3G4200D.cpp
+[151/833] Checking included headers libraries/AP_InertialSensor/AP_InertialSensor_LSM9DS0.cpp
+[152/833] Checking included headers libraries/AP_InertialSensor/AP_InertialSensor_PX4.cpp
+[153/833] Checking included headers libraries/AP_InertialSensor/AP_InertialSensor_QURT.cpp
+[154/833] Checking included headers libraries/AP_InertialSensor/AP_InertialSensor_SITL.cpp
+[155/833] Checking included headers libraries/AP_InertialSensor/AP_InertialSensor_UserInteract_MAVLink.cpp
+[156/833] Checking included headers libraries/AP_InertialSensor/AP_InertialSensor_UserInteract_Stream.cpp
+[157/833] Checking included headers libraries/AP_InertialSensor/AP_InertialSensor_qflight.cpp
+[158/833] Checking included headers libraries/AP_InertialSensor/AuxiliaryBus.cpp
+[159/833] Checking included headers libraries/AP_InertialSensor/BatchSampler.cpp
+[160/833] Checking included headers libraries/AP_InertialSensor/AP_InertialSensor.cpp
+[161/833] Checking included headers libraries/AP_JSButton/AP_JSButton.cpp
+[162/833] Checking included headers libraries/AP_L1_Control/AP_L1_Control.cpp
+[163/833] Checking included headers libraries/AP_Landing/AP_Landing.cpp
+[164/833] Checking included headers libraries/AP_Landing/AP_Landing_Deepstall.cpp
+[165/833] Checking included headers libraries/AP_Landing/AP_Landing_Slope.cpp
+[166/833] Checking included headers libraries/AP_LandingGear/AP_LandingGear.cpp
+[167/833] Checking included headers libraries/AP_LeakDetector/AP_LeakDetector.cpp
+[168/833] Checking included headers libraries/AP_LeakDetector/AP_LeakDetector_Analog.cpp
+[169/833] Checking included headers libraries/AP_LeakDetector/AP_LeakDetector_Backend.cpp
+[170/833] Checking included headers libraries/AP_LeakDetector/AP_LeakDetector_Digital.cpp
+[171/833] Checking included headers libraries/AP_Math/AP_GeodesicGrid.cpp
+[172/833] Checking included headers libraries/AP_Math/AP_Math.cpp
+[173/833] Checking included headers libraries/AP_Math/crc.cpp
+[174/833] Checking included headers libraries/AP_Math/edc.cpp
+[175/833] Checking included headers libraries/AP_Math/location.cpp
+[176/833] Checking included headers libraries/AP_Math/matrix3.cpp
+[177/833] Checking included headers libraries/AP_Math/matrixN.cpp
+[178/833] Checking included headers libraries/AP_Math/matrix_alg.cpp
+[179/833] Checking included headers libraries/AP_Math/polygon.cpp
+[180/833] Checking included headers libraries/AP_Math/quaternion.cpp
+[181/833] Checking included headers libraries/AP_Math/vector2.cpp
+[182/833] Checking included headers libraries/AP_Math/vector3.cpp
+[183/833] Checking included headers libraries/AP_Menu/AP_Menu.cpp
+[184/833] Checking included headers libraries/AP_Mission/AP_Mission.cpp
+[185/833] Checking included headers libraries/AP_Module/AP_Module.cpp
+[186/833] Checking included headers libraries/AP_Motors/AP_Motors6DOF.cpp
+[187/833] Checking included headers libraries/AP_Motors/AP_MotorsCoax.cpp
+[188/833] Checking included headers libraries/AP_Motors/AP_MotorsHeli.cpp
+[189/833] Checking included headers libraries/AP_Motors/AP_MotorsHeli_Dual.cpp
+[190/833] Checking included headers libraries/AP_Motors/AP_MotorsHeli_Quad.cpp
+[191/833] Checking included headers libraries/AP_Motors/AP_MotorsHeli_RSC.cpp
+[192/833] Checking included headers libraries/AP_Motors/AP_MotorsHeli_Single.cpp
+[193/833] Checking included headers libraries/AP_Motors/AP_MotorsMatrix.cpp
+[194/833] Checking included headers libraries/AP_Motors/AP_MotorsMulticopter.cpp
+[195/833] Checking included headers libraries/AP_Motors/AP_MotorsSingle.cpp
+[196/833] Checking included headers libraries/AP_Motors/AP_MotorsTri.cpp
+[197/833] Checking included headers libraries/AP_Motors/AP_Motors_Class.cpp
+[198/833] Checking included headers libraries/AP_Motors/AP_MotorsTailsitter.cpp
+[199/833] Checking included headers libraries/AP_Mount/AP_Mount.cpp
+[200/833] Checking included headers libraries/AP_Mount/AP_Mount_Alexmos.cpp
+[201/833] Checking included headers libraries/AP_Mount/AP_Mount_Backend.cpp
+[202/833] Checking included headers libraries/AP_Mount/AP_Mount_SToRM32.cpp
+[203/833] Checking included headers libraries/AP_Mount/AP_Mount_SToRM32_serial.cpp
+[204/833] Checking included headers libraries/AP_Mount/AP_Mount_Servo.cpp
+[205/833] Checking included headers libraries/AP_Mount/AP_Mount_SoloGimbal.cpp
+[206/833] Checking included headers libraries/AP_Mount/SoloGimbal.cpp
+[207/833] Checking included headers libraries/AP_Mount/SoloGimbalEKF.cpp
+[208/833] Checking included headers libraries/AP_Mount/SoloGimbal_Parameters.cpp
+[209/833] Checking included headers libraries/AP_NavEKF2/AP_NavEKF2_AirDataFusion.cpp
+[210/833] Checking included headers libraries/AP_NavEKF2/AP_NavEKF2_Control.cpp
+[211/833] Checking included headers libraries/AP_NavEKF2/AP_NavEKF2_MagFusion.cpp
+[212/833] Checking included headers libraries/AP_NavEKF2/AP_NavEKF2_Measurements.cpp
+[213/833] Checking included headers libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp
+[214/833] Checking included headers libraries/AP_NavEKF2/AP_NavEKF2_Outputs.cpp
+[215/833] Checking included headers libraries/AP_NavEKF2/AP_NavEKF2_PosVelFusion.cpp
+[216/833] Checking included headers libraries/AP_NavEKF2/AP_NavEKF2_RngBcnFusion.cpp
+[217/833] Checking included headers libraries/AP_NavEKF2/AP_NavEKF2_VehicleStatus.cpp
+[218/833] Checking included headers libraries/AP_NavEKF2/AP_NavEKF2_core.cpp
+[219/833] Checking included headers libraries/AP_NavEKF2/AP_NavEKF_GyroBias.cpp
+[220/833] Checking included headers libraries/AP_NavEKF2/AP_NavEKF2.cpp
+[221/833] Checking included headers libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp
+[222/833] Checking included headers libraries/AP_NavEKF3/AP_NavEKF3_Control.cpp
+[223/833] Checking included headers libraries/AP_NavEKF3/AP_NavEKF3_GyroBias.cpp
+[224/833] Checking included headers libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp
+[225/833] Checking included headers libraries/AP_NavEKF3/AP_NavEKF3_Measurements.cpp
+[226/833] Checking included headers libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp
+[227/833] Checking included headers libraries/AP_NavEKF3/AP_NavEKF3_Outputs.cpp
+[228/833] Checking included headers libraries/AP_NavEKF3/AP_NavEKF3_PosVelFusion.cpp
+[229/833] Checking included headers libraries/AP_NavEKF3/AP_NavEKF3_RngBcnFusion.cpp
+[230/833] Checking included headers libraries/AP_NavEKF3/AP_NavEKF3_VehicleStatus.cpp
+[231/833] Checking included headers libraries/AP_NavEKF3/AP_NavEKF3_core.cpp
+[232/833] Checking included headers libraries/AP_NavEKF3/AP_NavEKF3.cpp
+[233/833] Checking included headers libraries/AP_Notify/AP_BoardLED.cpp
+[234/833] Checking included headers libraries/AP_Notify/AP_Notify.cpp
+[235/833] Checking included headers libraries/AP_Notify/Buzzer.cpp
+[236/833] Checking included headers libraries/AP_Notify/DiscoLED.cpp
+[237/833] Checking included headers libraries/AP_Notify/DiscreteRGBLed.cpp
+[238/833] Checking included headers libraries/AP_Notify/Display.cpp
+[239/833] Checking included headers libraries/AP_Notify/Display_SH1106_I2C.cpp
+[240/833] Checking included headers libraries/AP_Notify/Display_SSD1306_I2C.cpp
+[241/833] Checking included headers libraries/AP_Notify/ExternalLED.cpp
+[242/833] Checking included headers libraries/AP_Notify/NavioLED.cpp
+[243/833] Checking included headers libraries/AP_Notify/NavioLED_I2C.cpp
+[244/833] Checking included headers libraries/AP_Notify/OreoLED_PX4.cpp
+[245/833] Checking included headers libraries/AP_Notify/PixRacerLED.cpp
+[246/833] Checking included headers libraries/AP_Notify/RCOutputRGBLed.cpp
+[247/833] Checking included headers libraries/AP_Notify/RGBLed.cpp
+[248/833] Checking included headers libraries/AP_Notify/ToneAlarm_Linux.cpp
+[249/833] Checking included headers libraries/AP_Notify/ToneAlarm_PX4.cpp
+[250/833] Checking included headers libraries/AP_Notify/ToshibaLED.cpp
+[251/833] Checking included headers libraries/AP_Notify/ToshibaLED_I2C.cpp
+[252/833] Checking included headers libraries/AP_Notify/VRBoard_LED.cpp
+[253/833] Checking included headers libraries/AP_OpticalFlow/AP_OpticalFlow_Onboard.cpp
+[254/833] Checking included headers libraries/AP_OpticalFlow/AP_OpticalFlow_PX4Flow.cpp
+[255/833] Checking included headers libraries/AP_OpticalFlow/AP_OpticalFlow_Pixart.cpp
+[256/833] Checking included headers libraries/AP_OpticalFlow/AP_OpticalFlow_SITL.cpp
+[257/833] Checking included headers libraries/AP_OpticalFlow/OpticalFlow.cpp
+[258/833] Checking included headers libraries/AP_OpticalFlow/OpticalFlow_backend.cpp
+[259/833] Checking included headers libraries/AP_Parachute/AP_Parachute.cpp
+[260/833] Checking included headers libraries/AP_Param/AP_Param.cpp
+[261/833] Checking included headers libraries/AP_Proximity/AP_Proximity.cpp
+[262/833] Checking included headers libraries/AP_Proximity/AP_Proximity_Backend.cpp
+[263/833] Checking included headers libraries/AP_Proximity/AP_Proximity_LightWareSF40C.cpp
+[264/833] Checking included headers libraries/AP_Proximity/AP_Proximity_MAV.cpp
+[265/833] Checking included headers libraries/AP_Proximity/AP_Proximity_RPLidarA2.cpp
+[266/833] Checking included headers libraries/AP_Proximity/AP_Proximity_RangeFinder.cpp
+[267/833] Checking included headers libraries/AP_Proximity/AP_Proximity_SITL.cpp
+[268/833] Checking included headers libraries/AP_Proximity/AP_Proximity_TeraRangerTower.cpp
+[269/833] Checking included headers libraries/AP_RCMapper/AP_RCMapper.cpp
+[270/833] Checking included headers libraries/AP_RPM/AP_RPM.cpp
+[271/833] Checking included headers libraries/AP_RPM/RPM_Backend.cpp
+[272/833] Checking included headers libraries/AP_RPM/RPM_PX4_PWM.cpp
+[273/833] Checking included headers libraries/AP_RPM/RPM_Pin.cpp
+[274/833] Checking included headers libraries/AP_RPM/RPM_SITL.cpp
+[275/833] Checking included headers libraries/AP_RSSI/AP_RSSI.cpp
+[276/833] Checking included headers libraries/AP_Rally/AP_Rally.cpp
+[277/833] Checking included headers libraries/AP_RangeFinder/AP_RangeFinder_BBB_PRU.cpp
+[278/833] Checking included headers libraries/AP_RangeFinder/AP_RangeFinder_Bebop.cpp
+[279/833] Checking included headers libraries/AP_RangeFinder/AP_RangeFinder_LeddarOne.cpp
+[280/833] Checking included headers libraries/AP_RangeFinder/AP_RangeFinder_LightWareI2C.cpp
+[281/833] Checking included headers libraries/AP_RangeFinder/AP_RangeFinder_LightWareSerial.cpp
+[282/833] Checking included headers libraries/AP_RangeFinder/AP_RangeFinder_MAVLink.cpp
+[283/833] Checking included headers libraries/AP_RangeFinder/AP_RangeFinder_MaxsonarI2CXL.cpp
+[284/833] Checking included headers libraries/AP_RangeFinder/AP_RangeFinder_MaxsonarSerialLV.cpp
+[285/833] Checking included headers libraries/AP_RangeFinder/AP_RangeFinder_PX4_PWM.cpp
+[286/833] Checking included headers libraries/AP_RangeFinder/AP_RangeFinder_PulsedLightLRF.cpp
+[287/833] Checking included headers libraries/AP_RangeFinder/AP_RangeFinder_TeraRangerI2C.cpp
+[288/833] Checking included headers libraries/AP_RangeFinder/AP_RangeFinder_VL53L0X.cpp
+[289/833] Checking included headers libraries/AP_RangeFinder/AP_RangeFinder_analog.cpp
+[290/833] Checking included headers libraries/AP_RangeFinder/AP_RangeFinder_uLanding.cpp
+[291/833] Checking included headers libraries/AP_RangeFinder/RangeFinder.cpp
+[292/833] Checking included headers libraries/AP_RangeFinder/RangeFinder_Backend.cpp
+[293/833] Checking included headers libraries/AP_Relay/AP_Relay.cpp
+[294/833] Checking included headers libraries/AP_Scheduler/AP_Scheduler.cpp
+[295/833] Checking included headers libraries/AP_SerialManager/AP_SerialManager.cpp
+[296/833] Checking included headers libraries/AP_ServoRelayEvents/AP_ServoRelayEvents.cpp
+[297/833] Checking included headers libraries/AP_SmartRTL/AP_SmartRTL.cpp
+[298/833] Checking included headers libraries/AP_Soaring/AP_Soaring.cpp
+[299/833] Checking included headers libraries/AP_Soaring/ExtendedKalmanFilter.cpp
+[300/833] Checking included headers libraries/AP_Soaring/Variometer.cpp
+[301/833] Checking included headers libraries/AP_Stats/AP_Stats.cpp
+[302/833] Checking included headers libraries/AP_TECS/AP_TECS.cpp
+[303/833] Checking included headers libraries/AP_TemperatureSensor/TSYS01.cpp
+[304/833] Checking included headers libraries/AP_Terrain/AP_Terrain.cpp
+[305/833] Checking included headers libraries/AP_Terrain/TerrainGCS.cpp
+[306/833] Checking included headers libraries/AP_Terrain/TerrainIO.cpp
+[307/833] Checking included headers libraries/AP_Terrain/TerrainMission.cpp
+[308/833] Checking included headers libraries/AP_Terrain/TerrainUtil.cpp
+[309/833] Checking included headers libraries/AP_Tuning/AP_Tuning.cpp
+[310/833] Checking included headers libraries/AP_UAVCAN/AP_UAVCAN.cpp
+[311/833] Checking included headers libraries/AP_VisualOdom/AP_VisualOdom.cpp
+[312/833] Checking included headers libraries/AP_VisualOdom/AP_VisualOdom_Backend.cpp
+[313/833] Checking included headers libraries/AP_VisualOdom/AP_VisualOdom_MAV.cpp
+[314/833] Checking included headers libraries/AP_WheelEncoder/AP_WheelEncoder.cpp
+[315/833] Checking included headers libraries/AP_WheelEncoder/WheelEncoder_Backend.cpp
+[316/833] Checking included headers libraries/AP_WheelEncoder/WheelEncoder_Quadrature.cpp
+[317/833] Checking included headers libraries/AP_Winch/AP_Winch.cpp
+[318/833] Checking included headers libraries/AP_Winch/AP_Winch_Servo.cpp
+[319/833] Checking included headers libraries/AP_Zbo/AP_Zbo.cpp
+[320/833] Checking included headers libraries/DataFlash/DFMessageWriter.cpp
+[321/833] Checking included headers libraries/DataFlash/DataFlash.cpp
+[322/833] Checking included headers libraries/DataFlash/DataFlash_Backend.cpp
+[323/833] Checking included headers libraries/DataFlash/DataFlash_File.cpp
+[324/833] Checking included headers libraries/DataFlash/DataFlash_MAVLink.cpp
+[325/833] Checking included headers libraries/DataFlash/DataFlash_MAVLinkLogTransfer.cpp
+[326/833] Checking included headers libraries/DataFlash/LogFile.cpp
+[327/833] Checking included headers libraries/Filter/DerivativeFilter.cpp
+[328/833] Checking included headers libraries/Filter/LowPassFilter.cpp
+[329/833] Checking included headers libraries/Filter/LowPassFilter2p.cpp
+[330/833] Checking included headers libraries/Filter/NotchFilter.cpp
+[331/833] Checking included headers libraries/GCS_MAVLink/GCS.cpp
+[332/833] Checking included headers libraries/GCS_MAVLink/GCS_Common.cpp
+[333/833] Checking included headers libraries/GCS_MAVLink/GCS_DeviceOp.cpp
+[334/833] Checking included headers libraries/GCS_MAVLink/GCS_MAVLink.cpp
+[335/833] Checking included headers libraries/GCS_MAVLink/GCS_Param.cpp
+[336/833] Checking included headers libraries/GCS_MAVLink/GCS_Rally.cpp
+[337/833] Checking included headers libraries/GCS_MAVLink/GCS_ServoRelay.cpp
+[338/833] Checking included headers libraries/GCS_MAVLink/GCS_Signing.cpp
+[339/833] Checking included headers libraries/GCS_MAVLink/GCS_serial_control.cpp
+[340/833] Checking included headers libraries/GCS_MAVLink/MAVLink_routing.cpp
+[341/833] Checking included headers libraries/PID/PID.cpp
+[342/833] Checking included headers libraries/RC_Channel/RC_Channel.cpp
+[343/833] Checking included headers libraries/RC_Channel/RC_Channels.cpp
+[344/833] Checking included headers libraries/SRV_Channel/SRV_Channel.cpp
+[345/833] Checking included headers libraries/SRV_Channel/SRV_Channel_aux.cpp
+[346/833] Checking included headers libraries/SRV_Channel/SRV_Channels.cpp
+[347/833] Checking included headers libraries/StorageManager/StorageManager.cpp
+[348/833] Checking included headers libraries/AP_HAL/Device.cpp
+[349/833] Checking included headers libraries/AP_HAL/HAL.cpp
+[350/833] Checking included headers libraries/AP_HAL/UARTDriver.cpp
+[351/833] Checking included headers libraries/AP_HAL/Util.cpp
+[352/833] Checking included headers libraries/AP_HAL/utility/Print.cpp
+[353/833] Checking included headers libraries/AP_HAL/utility/RCOutput_Tap.cpp
+[354/833] Checking included headers libraries/AP_HAL/utility/RCOutput_Tap_Linux.cpp
+[355/833] Checking included headers libraries/AP_HAL/utility/RCOutput_Tap_Nuttx.cpp
+[356/833] Checking included headers libraries/AP_HAL/utility/RingBuffer.cpp
+[357/833] Checking included headers libraries/AP_HAL/utility/Socket.cpp
+[358/833] Checking included headers libraries/AP_HAL/utility/dsm.cpp
+[359/833] Checking included headers libraries/AP_HAL/utility/ftoa_engine.cpp
+[360/833] Checking included headers libraries/AP_HAL/utility/getopt_cpp.cpp
+[361/833] Checking included headers libraries/AP_HAL/utility/print_vprintf.cpp
+[362/833] Checking included headers libraries/AP_HAL/utility/srxl.cpp
+[363/833] Checking included headers libraries/AP_HAL/utility/st24.cpp
+[364/833] Checking included headers libraries/AP_HAL/utility/sumd.cpp
+[365/833] Checking included headers libraries/AP_HAL/utility/utoa_invert.cpp
+[366/833] Checking included headers libraries/AP_HAL_Empty/AnalogIn.cpp
+[367/833] Checking included headers libraries/AP_HAL_Empty/GPIO.cpp
+[368/833] Checking included headers libraries/AP_HAL_Empty/HAL_Empty_Class.cpp
+[369/833] Checking included headers libraries/AP_HAL_Empty/PrivateMember.cpp
+[370/833] Checking included headers libraries/AP_HAL_Empty/RCInput.cpp
+[371/833] Checking included headers libraries/AP_HAL_Empty/RCOutput.cpp
+[372/833] Checking included headers libraries/AP_HAL_Empty/Scheduler.cpp
+[373/833] Checking included headers libraries/AP_HAL_Empty/Semaphores.cpp
+[374/833] Checking included headers libraries/AP_HAL_Empty/Storage.cpp
+[375/833] Checking included headers libraries/AP_HAL_Empty/UARTDriver.cpp
+[376/833] Checking included headers modules/uavcan/libuavcan/src/driver/uc_can.cpp
+[377/833] Checking included headers modules/uavcan/libuavcan/src/marshal/uc_bit_array_copy.cpp
+[378/833] Checking included headers modules/uavcan/libuavcan/src/marshal/uc_bit_stream.cpp
+[379/833] Checking included headers modules/uavcan/libuavcan/src/marshal/uc_float_spec.cpp
+[380/833] Checking included headers modules/uavcan/libuavcan/src/marshal/uc_scalar_codec.cpp
+[381/833] Checking included headers modules/uavcan/libuavcan/src/node/uc_generic_publisher.cpp
+[382/833] Checking included headers modules/uavcan/libuavcan/src/node/uc_generic_subscriber.cpp
+[383/833] Checking included headers modules/uavcan/libuavcan/src/node/uc_global_data_type_registry.cpp
+[384/833] Checking included headers modules/uavcan/libuavcan/src/node/uc_scheduler.cpp
+[385/833] Checking included headers modules/uavcan/libuavcan/src/node/uc_service_client.cpp
+[386/833] Checking included headers modules/uavcan/libuavcan/src/node/uc_timer.cpp
+[387/833] Checking included headers modules/uavcan/libuavcan/src/protocol/uc_dynamic_node_id_client.cpp
+[388/833] Checking included headers modules/uavcan/libuavcan/src/protocol/uc_node_status_provider.cpp
+[389/833] Checking included headers modules/uavcan/libuavcan/src/transport/uc_can_acceptance_filter_configurator.cpp
+[390/833] Checking included headers modules/uavcan/libuavcan/src/transport/uc_can_io.cpp
+[391/833] Checking included headers modules/uavcan/libuavcan/src/transport/uc_crc.cpp
+[392/833] Checking included headers modules/uavcan/libuavcan/src/transport/uc_dispatcher.cpp
+[393/833] Checking included headers modules/uavcan/libuavcan/src/transport/uc_frame.cpp
+[394/833] Checking included headers modules/uavcan/libuavcan/src/transport/uc_outgoing_transfer_registry.cpp
+[395/833] Checking included headers modules/uavcan/libuavcan/src/transport/uc_transfer.cpp
+[396/833] Checking included headers modules/uavcan/libuavcan/src/transport/uc_transfer_buffer.cpp
+[397/833] Checking included headers modules/uavcan/libuavcan/src/transport/uc_transfer_listener.cpp
+[398/833] Checking included headers modules/uavcan/libuavcan/src/transport/uc_transfer_receiver.cpp
+[399/833] Checking included headers modules/uavcan/libuavcan/src/transport/uc_transfer_sender.cpp
+[400/833] Checking included headers modules/uavcan/libuavcan/src/uc_data_type.cpp
+[401/833] Checking included headers modules/uavcan/libuavcan/src/uc_dynamic_memory.cpp
+[402/833] Checking included headers modules/uavcan/libuavcan/src/uc_error.cpp
+[403/833] Checking included headers libraries/AP_HAL_PX4/AnalogIn.cpp
+[404/833] Checking included headers libraries/AP_HAL_PX4/CAN.cpp
+[405/833] Checking included headers libraries/AP_HAL_PX4/Device.cpp
+[406/833] Checking included headers libraries/AP_HAL_PX4/GPIO.cpp
+[407/833] Checking included headers libraries/AP_HAL_PX4/I2CDevice.cpp
+[408/833] Checking included headers libraries/AP_HAL_PX4/NSHShellStream.cpp
+[409/833] Checking included headers libraries/AP_HAL_PX4/RCInput.cpp
+[410/833] Checking included headers libraries/AP_HAL_PX4/RCOutput.cpp
+[411/833] Checking included headers libraries/AP_HAL_PX4/SPIDevice.cpp
+[412/833] Checking included headers libraries/AP_HAL_PX4/Scheduler.cpp
+[413/833] Checking included headers libraries/AP_HAL_PX4/Semaphores.cpp
+[414/833] Checking included headers libraries/AP_HAL_PX4/Storage.cpp
+[415/833] Checking included headers libraries/AP_HAL_PX4/UARTDriver.cpp
+[416/833] Checking included headers libraries/AP_HAL_PX4/Util.cpp
+[417/833] Checking included headers libraries/AP_HAL_PX4/px4_param.cpp
+[418/833] Checking included headers libraries/AP_HAL_PX4/system.cpp
+[419/833] Checking included headers libraries/AP_HAL_PX4/HAL_PX4_Class.cpp
+[420/833] CMake Configure px4
+-- nuttx-px4fmu-v2-apm
+[421/833] Compiling libraries/AP_Notify/Buzzer.cpp
+[422/833] Compiling libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp
+[423/833] Compiling libraries/GCS_MAVLink/MAVLink_routing.cpp
+[425/833] Compiling libraries/AP_Notify/RGBLed.cpp
+[426/833] Compiling libraries/AP_Notify/ToneAlarm_PX4.cpp
+[427/833] Compiling libraries/AP_Motors/AP_Motors_Class.cpp
+[427/833] Compiling libraries/AP_Scheduler/AP_Scheduler.cpp
+-- could not find gdbtui
+-- could not find ddd
+-- could not find gdbtui
+-- could not find ddd
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/local/bin/arm-none-eabi-gcc
+-- Found PythonInterp: /usr/bin/python (found version "2.7.10")
+[428/833] Compiling libraries/AC_PID/AC_HELI_PID.cpp
+-- GIT_DESC = 0384802e81330751f39550a0804357d8b04f278a
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware
+INCLUDE_DIRS=/Users/zbo/Git/ardupilot/modules/PX4Firmware/src;/Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware;/Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware/src;/Users/zbo/Git/ardupilot/modules/PX4Firmware/src/modules;/Users/zbo/Git/ardupilot/modules/PX4Firmware/src/include;/Users/zbo/Git/ardupilot/modules/PX4Firmware/src/lib;/Users/zbo/Git/ardupilot/modules/PX4Firmware/src/platforms;/Users/zbo/Git/ardupilot/modules/PX4Firmware/src/drivers/boards/px4fmu-v2;/Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware;/Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware/src/modules/px4_messages;/Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware/src/modules;/Users/zbo/Git/ardupilot/modules/PX4Firmware/mavlink/include/mavlink;/Users/zbo/Git/ardupilot/modules/PX4Firmware/src/lib/DriverFramework/framework/include;src/lib/matrix;/Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware/px4fmu-v2/NuttX/nuttx-export/include;/Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware/px4fmu-v2/NuttX/nuttx-export/include/cxx;/Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware/px4fmu-v2/NuttX/nuttx-export/arch/chip;/Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware/px4fmu-v2/NuttX/nuttx-export/arch/common
+ADDING DRIVERS
+
+[429/833] Compiling libraries/AP_Notify/ExternalLED.cpp
+[430/833] Compiling libraries/AP_HAL_Empty/HAL_Empty_Class.cpp
+[431/833] Compiling libraries/AP_Button/AP_Button.cpp
+[432/833] Compiling libraries/AP_RangeFinder/AP_RangeFinder_PulsedLightLRF.cpp
+[433/833] Compiling libraries/AP_HAL/utility/RCOutput_Tap_Nuttx.cpp
+[434/833] Compiling libraries/AP_Zbo/AP_Zbo.cpp
+[435/833] Compiling libraries/AP_NavEKF2/AP_NavEKF2_VehicleStatus.cpp
+[436/833] Compiling libraries/AP_Frsky_Telem/AP_Frsky_Telem.cpp
+[437/833] Compiling modules/uavcan/libuavcan/src/node/uc_scheduler.cpp
+[438/833] Compiling libraries/AP_BattMonitor/AP_BattMonitor_SMBus_Solo.cpp
+[440/833] Compiling libraries/AP_BattMonitor/AP_BattMonitor_SMBus.cpp
+[440/833] Compiling libraries/AP_Notify/PixRacerLED.cpp
+[441/833] Compiling libraries/AP_HAL/utility/RCOutput_Tap.cpp
+[442/833] Compiling modules/uavcan/libuavcan/src/marshal/uc_bit_array_copy.cpp
+[443/833] Compiling libraries/GCS_MAVLink/GCS_Param.cpp
+[444/833] Compiling libraries/AP_Mount/AP_Mount_SToRM32_serial.cpp
+[445/833] Compiling libraries/AP_NavEKF3/AP_NavEKF3_Control.cpp
+[446/833] Compiling libraries/AP_JSButton/AP_JSButton.cpp
+[447/833] Compiling libraries/AC_InputManager/AC_InputManager_Heli.cpp
+[448/833] Compiling libraries/AP_BattMonitor/AP_BattMonitor_Bebop.cpp
+[449/833] Compiling libraries/RC_Channel/RC_Channels.cpp
+[450/833] Compiling libraries/AP_Airspeed/AP_Airspeed_MS5525.cpp
+[451/833] Compiling libraries/AP_Mount/SoloGimbalEKF.cpp
+[452/833] Compiling modules/uavcan/libuavcan/src/transport/uc_dispatcher.cpp
+[453/833] Compiling libraries/AP_HAL_PX4/GPIO.cpp
+[454/833] Compiling libraries/AP_ICEngine/AP_ICEngine.cpp
+[455/833] Compiling libraries/AP_Compass/AP_Compass_qflight.cpp
+[456/833] Compiling libraries/GCS_MAVLink/GCS_MAVLink.cpp
+[457/833] Compiling libraries/AP_Baro/AP_Baro_UAVCAN.cpp
+[458/833] Compiling libraries/AP_Soaring/Variometer.cpp
+[459/833] Compiling libraries/AP_HAL/utility/RingBuffer.cpp
+[460/833] Compiling libraries/AP_OpticalFlow/AP_OpticalFlow_PX4Flow.cpp
+[461/833] Compiling libraries/AP_Compass/AP_Compass_Backend.cpp
+[462/833] Compiling libraries/AP_Rally/AP_Rally.cpp
+[463/833] Compiling libraries/AP_GPS/GPS_Backend.cpp
+[464/833] Compiling libraries/AP_BoardConfig/AP_BoardConfig.cpp
+[465/833] Compiling libraries/AP_InertialSensor/AP_InertialSensor_PX4.cpp
+[467/833] Compiling libraries/AP_GPS/AP_GPS_NOVA.cpp
+[467/833] Compiling libraries/AP_Relay/AP_Relay.cpp
+[468/833] Compiling libraries/AP_GPS/AP_GPS.cpp
+[469/833] Compiling libraries/AP_ADC/AP_ADC_ADS1115.cpp
+[470/833] Compiling libraries/AP_HAL_Empty/PrivateMember.cpp
+[471/833] Compiling modules/uavcan/libuavcan/src/driver/uc_can.cpp
+[472/833] Compiling libraries/AP_NavEKF3/AP_NavEKF3_core.cpp
+[473/833] Compiling libraries/AP_IRLock/IRLock.cpp
+[474/833] Compiling libraries/AP_Compass/AP_Compass_HMC5843.cpp
+[475/833] Compiling libraries/AC_Avoidance/AC_Avoid.cpp
+[476/833] Compiling libraries/AC_PrecLand/AC_PrecLand_IRLock.cpp
+[477/833] Compiling libraries/AP_Proximity/AP_Proximity_Backend.cpp
+[478/833] Compiling libraries/AP_AccelCal/AP_AccelCal.cpp
+[479/833] Compiling libraries/AC_PrecLand/AC_PrecLand_SITL_Gazebo.cpp
+[480/833] Compiling libraries/AP_Proximity/AP_Proximity_TeraRangerTower.cpp
+[481/833] Compiling libraries/AC_AttitudeControl/AC_AttitudeControl_Sub.cpp
+[482/833] Compiling modules/uavcan/libuavcan/src/transport/uc_transfer.cpp
+[483/833] Compiling libraries/AP_RangeFinder/AP_RangeFinder_PX4_PWM.cpp
+[485/833] Compiling libraries/AP_Notify/ToshibaLED_I2C.cpp
+[485/833] Compiling libraries/AP_LeakDetector/AP_LeakDetector.cpp
+[486/833] Compiling libraries/AP_Declination/AP_Declination.cpp
+[487/833] Compiling libraries/AC_AttitudeControl/AC_AttitudeControl_Multi.cpp
+[488/833] Compiling libraries/AP_RangeFinder/AP_RangeFinder_MaxsonarI2CXL.cpp
+[489/833] Compiling libraries/AP_Baro/AP_Baro_KellerLD.cpp
+[490/833] Compiling libraries/AP_Compass/AP_Compass_LSM303D.cpp
+[491/833] Compiling libraries/AP_NavEKF2/AP_NavEKF2_PosVelFusion.cpp
+[492/833] Compiling libraries/AP_Baro/AP_Baro_BMP085.cpp
+[494/833] Compiling libraries/AP_HAL/UARTDriver.cpp
+[494/833] Compiling libraries/AP_Compass/AP_Compass_BMM150.cpp
+[495/833] Compiling libraries/AP_HAL_Empty/Storage.cpp
+[496/833] Compiling libraries/AP_ADSB/AP_ADSB.cpp
+[497/833] Compiling libraries/AP_GPS/AP_GPS_MTK.cpp
+[498/833] Compiling libraries/Filter/DerivativeFilter.cpp
+[499/833] Compiling libraries/AC_AttitudeControl/ControlMonitor.cpp
+[500/833] Compiling libraries/AP_Stats/AP_Stats.cpp
+[501/833] Compiling libraries/AP_WheelEncoder/WheelEncoder_Quadrature.cpp
+[502/833] Compiling libraries/AP_NavEKF2/AP_NavEKF2_Outputs.cpp
+[503/833] Compiling libraries/AP_HAL_Empty/Scheduler.cpp
+[504/833] Compiling libraries/AP_Proximity/AP_Proximity_LightWareSF40C.cpp
+[505/833] Compiling libraries/APM_Control/AP_AutoTune.cpp
+[506/833] Compiling libraries/AP_RangeFinder/AP_RangeFinder_uLanding.cpp
+[507/833] Compiling libraries/AP_Motors/AP_MotorsHeli.cpp
+[509/833] Compiling libraries/AP_HAL_Empty/AnalogIn.cpp
+[509/833] Compiling libraries/AP_InertialSensor/AP_InertialSensor_Invensense.cpp
+[510/833] Compiling libraries/AP_Motors/AP_Motors6DOF.cpp
+[511/833] Compiling libraries/AP_Math/location.cpp
+[512/833] Compiling libraries/AP_Terrain/TerrainMission.cpp
+[513/833] Compiling libraries/AP_AHRS/AP_AHRS_View.cpp
+[514/833] Compiling libraries/AP_SerialManager/AP_SerialManager.cpp
+[515/833] Compiling libraries/APM_Control/AR_AttitudeControl.cpp
+[516/833] Compiling libraries/AP_Beacon/AP_Beacon_SITL.cpp
+[517/833] Compiling libraries/AP_Landing/AP_Landing_Deepstall.cpp
+[518/833] Compiling libraries/AC_PID/AC_PID.cpp
+[519/833] Compiling libraries/AP_Notify/AP_BoardLED.cpp
+[520/833] Compiling libraries/AP_HAL_Empty/Semaphores.cpp
+[521/833] Compiling libraries/AP_HAL_PX4/Device.cpp
+[522/833] Compiling libraries/AP_UAVCAN/AP_UAVCAN.cpp
+[523/833] Compiling libraries/AC_PrecLand/PosVelEKF.cpp
+[525/833] Compiling libraries/AP_RangeFinder/AP_RangeFinder_TeraRangerI2C.cpp
+[525/833] Compiling modules/uavcan/libuavcan/src/transport/uc_transfer_receiver.cpp
+[526/833] Compiling libraries/AP_Airspeed/AP_Airspeed_Backend.cpp
+[527/833] Compiling libraries/AP_FlashStorage/AP_FlashStorage.cpp
+[528/833] Compiling libraries/AP_HAL_Empty/GPIO.cpp
+[529/833] Compiling libraries/AC_Fence/AC_PolyFence_loader.cpp
+[530/833] Compiling libraries/AP_GPS/AP_GPS_MTK19.cpp
+[531/833] Compiling libraries/AP_HAL_Empty/UARTDriver.cpp
+[532/833] Compiling libraries/AP_Motors/AP_MotorsHeli_Single.cpp
+[533/833] Compiling libraries/AP_Mount/AP_Mount_Servo.cpp
+[534/833] Compiling libraries/AC_WPNav/AC_WPNav.cpp
+[535/833] Compiling libraries/AC_PrecLand/AC_PrecLand.cpp
+[536/833] Compiling libraries/AP_InertialSensor/AP_InertialSensor_UserInteract_MAVLink.cpp
+[537/833] Compiling libraries/AP_Proximity/AP_Proximity_RangeFinder.cpp
+[538/833] Compiling libraries/AP_Mount/SoloGimbal_Parameters.cpp
+[539/833] Compiling libraries/AP_NavEKF3/AP_NavEKF3_PosVelFusion.cpp
+[540/833] Compiling libraries/AP_AdvancedFailsafe/AP_AdvancedFailsafe.cpp
+[541/833] Compiling libraries/SRV_Channel/SRV_Channels.cpp
+[542/833] Compiling libraries/AP_Math/edc.cpp
+[543/833] Compiling libraries/DataFlash/DataFlash_Backend.cpp
+[544/833] Compiling libraries/AP_InertialSensor/AP_InertialSensor_LSM9DS0.cpp
+[545/833] Compiling libraries/AP_NavEKF2/AP_NavEKF2.cpp
+[546/833] Compiling libraries/AP_Landing/AP_Landing.cpp
+[547/833] Compiling libraries/AP_Compass/AP_Compass_MMC3416.cpp
+[548/833] Compiling libraries/AP_Avoidance/AP_Avoidance.cpp
+[549/833] Compiling libraries/AP_Gripper/AP_Gripper_EPM.cpp
+[550/833] Compiling modules/uavcan/libuavcan/src/marshal/uc_scalar_codec.cpp
+[551/833] Compiling libraries/AP_RangeFinder/AP_RangeFinder_LightWareSerial.cpp
+[552/833] Compiling libraries/AP_InertialSensor/AP_InertialSensor_BMI160.cpp
+[553/833] Compiling libraries/AP_HAL_PX4/Util.cpp
+[554/833] Compiling libraries/AP_Airspeed/Airspeed_Calibration.cpp
+[555/833] Compiling libraries/SRV_Channel/SRV_Channel.cpp
+[556/833] Compiling libraries/AP_Notify/Display.cpp
+[557/833] Compiling libraries/AP_Gripper/AP_Gripper_Servo.cpp
+[558/833] Compiling libraries/AP_HAL/utility/sumd.cpp
+[559/833] Compiling modules/uavcan/libuavcan/src/transport/uc_frame.cpp
+[560/833] Compiling libraries/AP_Compass/AP_Compass_AK09916.cpp
+[561/833] Compiling libraries/AP_Baro/AP_Baro_HIL.cpp
+[562/833] Compiling libraries/AP_Winch/AP_Winch_Servo.cpp
+[563/833] Compiling libraries/AP_Motors/AP_MotorsTailsitter.cpp
+[564/833] Compiling libraries/AP_RangeFinder/RangeFinder.cpp
+[565/833] Compiling libraries/AP_HAL_PX4/Semaphores.cpp
+[566/833] Compiling libraries/AP_Motors/AP_MotorsCoax.cpp
+[567/833] Compiling libraries/AP_HAL_PX4/Scheduler.cpp
+[568/833] Compiling libraries/AP_GPS/AP_GPS_UAVCAN.cpp
+[569/833] Compiling libraries/AP_IRLock/AP_IRLock_SITL.cpp
+[570/833] Compiling libraries/DataFlash/DataFlash_MAVLinkLogTransfer.cpp
+[571/833] Compiling libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp
+[572/833] Compiling libraries/AP_HAL/utility/st24.cpp
+[573/833] Compiling libraries/AP_HAL_PX4/RCOutput.cpp
+[574/833] Compiling libraries/AP_HAL/utility/print_vprintf.cpp
+[575/833] Compiling libraries/AP_Baro/AP_Baro_LPS25H.cpp
+[576/833] Compiling libraries/AP_OpticalFlow/AP_OpticalFlow_SITL.cpp
+[577/833] Compiling libraries/AP_Gripper/AP_Gripper.cpp
+[578/833] Compiling libraries/Filter/LowPassFilter.cpp
+[579/833] Compiling libraries/GCS_MAVLink/GCS_Rally.cpp
+[580/833] Compiling libraries/AP_RPM/RPM_Backend.cpp
+[581/833] Compiling libraries/AP_Compass/AP_Compass_HIL.cpp
+[582/833] Compiling libraries/AP_VisualOdom/AP_VisualOdom.cpp
+[583/833] Compiling libraries/AP_HAL/utility/Socket.cpp
+[584/833] Compiling modules/uavcan/libuavcan/src/marshal/uc_float_spec.cpp
+[585/833] Compiling libraries/AP_LeakDetector/AP_LeakDetector_Backend.cpp
+[586/833] Compiling libraries/AP_Terrain/TerrainGCS.cpp
+[587/833] Compiling libraries/AP_Beacon/AP_Beacon_Pozyx.cpp
+[588/833] Compiling libraries/AP_GPS/AP_GPS_MAV.cpp
+[589/833] Compiling libraries/AP_Beacon/AP_Beacon.cpp
+[590/833] Compiling modules/uavcan/libuavcan/src/uc_dynamic_memory.cpp
+[591/833] Compiling libraries/AP_HAL_PX4/SPIDevice.cpp
+[592/833] Compiling libraries/AP_RangeFinder/AP_RangeFinder_LeddarOne.cpp
+[593/833] Compiling modules/uavcan/libuavcan/src/protocol/uc_dynamic_node_id_client.cpp
+[594/833] Compiling libraries/AP_GPS/AP_GPS_SIRF.cpp
+[595/833] Compiling libraries/AP_InertialSensor/AP_InertialSensor_qflight.cpp
+[596/833] Compiling libraries/AP_RCMapper/AP_RCMapper.cpp
+[597/833] Compiling libraries/AP_Terrain/TerrainUtil.cpp
+[598/833] Compiling libraries/AP_Winch/AP_Winch.cpp
+[599/833] Compiling libraries/AP_Tuning/AP_Tuning.cpp
+[600/833] Compiling libraries/AP_Notify/VRBoard_LED.cpp
+[601/833] Compiling libraries/AP_Math/AP_Math.cpp
+[602/833] Compiling libraries/AP_HAL_PX4/RCInput.cpp
+[603/833] Compiling libraries/AP_WheelEncoder/AP_WheelEncoder.cpp
+[604/833] Compiling libraries/AP_Menu/AP_Menu.cpp
+[605/833] Compiling libraries/AP_Terrain/AP_Terrain.cpp
+[606/833] Compiling libraries/AP_Compass/CompassCalibrator.cpp
+[607/833] Compiling libraries/AC_AttitudeControl/AC_AttitudeControl_Heli.cpp
+[608/833] Compiling libraries/AP_BattMonitor/AP_BattMonitor_SMBus_Maxell.cpp
+[609/833] Compiling libraries/AP_Baro/AP_Baro.cpp
+[610/833] Compiling libraries/AP_HAL/Util.cpp
+[611/833] Compiling libraries/AP_BoardConfig/canbus.cpp
+[612/833] Compiling libraries/RC_Channel/RC_Channel.cpp
+[613/833] Compiling libraries/AP_Motors/AP_MotorsHeli_Quad.cpp
+[614/833] Compiling libraries/AP_GPS/AP_GPS_SBF.cpp
+[615/833] Compiling libraries/AP_HAL_PX4/NSHShellStream.cpp
+[616/833] Compiling libraries/AC_AttitudeControl/AC_PosControl.cpp
+[617/833] Compiling libraries/AP_Notify/AP_Notify.cpp
+[618/833] Compiling libraries/AP_Notify/Display_SH1106_I2C.cpp
+[619/833] Compiling libraries/AP_Notify/Display_SSD1306_I2C.cpp
+[620/833] Compiling libraries/AP_Notify/NavioLED.cpp
+[621/833] Compiling libraries/Filter/LowPassFilter2p.cpp
+[622/833] Compiling libraries/SRV_Channel/SRV_Channel_aux.cpp
+[623/833] Compiling modules/uavcan/libuavcan/src/node/uc_service_client.cpp
+[624/833] Compiling libraries/AC_Sprayer/AC_Sprayer.cpp
+[625/833] Compiling libraries/AP_BoardConfig/AP_BoardConfig_CAN.cpp
+[626/833] Compiling libraries/AP_Gripper/AP_Gripper_Backend.cpp
+[627/833] Compiling libraries/AP_RangeFinder/AP_RangeFinder_LightWareI2C.cpp
+[628/833] Compiling libraries/AP_HAL_PX4/px4_param.cpp
+[629/833] Compiling libraries/AP_RangeFinder/AP_RangeFinder_MaxsonarSerialLV.cpp
+[630/833] Compiling libraries/AC_AttitudeControl/AC_PosControl_Sub.cpp
+[631/833] Compiling libraries/GCS_MAVLink/GCS_Signing.cpp
+[632/833] Compiling libraries/AP_Terrain/TerrainIO.cpp
+[634/833] Compiling libraries/AP_AccelCal/AccelCalibrator.cpp
+[634/833] Compiling libraries/AP_NavEKF3/AP_NavEKF3_Outputs.cpp
+[635/833] Compiling libraries/DataFlash/LogFile.cpp
+[636/833] Compiling libraries/AP_Motors/AP_MotorsHeli_RSC.cpp
+[637/833] Compiling libraries/AP_Motors/AP_MotorsSingle.cpp
+[638/833] Compiling libraries/AP_Compass/AP_Compass_LSM9DS1.cpp
+[639/833] Compiling libraries/AP_Motors/AP_MotorsMatrix.cpp
+[640/833] Compiling modules/uavcan/libuavcan/src/transport/uc_can_io.cpp
+[641/833] Compiling libraries/AP_NavEKF3/AP_NavEKF3_VehicleStatus.cpp
+[642/833] Compiling libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp
+[643/833] Compiling libraries/AP_GPS/AP_GPS_NMEA.cpp
+[644/833] Compiling libraries/AP_NavEKF3/AP_NavEKF3_Measurements.cpp
+[645/833] Compiling libraries/AP_HAL_PX4/CAN.cpp
+[646/833] Compiling libraries/AP_NavEKF3/AP_NavEKF3_RngBcnFusion.cpp
+[647/833] Compiling libraries/AP_RangeFinder/AP_RangeFinder_analog.cpp
+[648/833] Compiling libraries/AP_Math/quaternion.cpp
+[649/833] Compiling modules/uavcan/libuavcan/src/node/uc_generic_publisher.cpp
+[650/833] Compiling libraries/AP_InertialSensor/AP_InertialSensor_UserInteract_Stream.cpp
+[652/833] Compiling libraries/AP_InertialSensor/AP_InertialSensor_SITL.cpp
+[652/833] Compiling libraries/AP_Common/Location.cpp
+[653/833] Compiling libraries/AP_InertialSensor/AP_InertialSensor_HIL.cpp
+[654/833] Compiling libraries/DataFlash/DataFlash_MAVLink.cpp
+[655/833] Compiling libraries/APM_Control/AP_RollController.cpp
+[656/833] Compiling libraries/AP_OpticalFlow/OpticalFlow.cpp
+[657/833] Compiling libraries/AP_Notify/DiscreteRGBLed.cpp
+[658/833] Compiling libraries/AP_Baro/AP_Baro_QURT.cpp
+[659/833] Compiling libraries/AP_Landing/AP_Landing_Slope.cpp
+[660/833] Compiling libraries/AP_RPM/RPM_PX4_PWM.cpp
+[661/833] Compiling libraries/AP_HAL_PX4/system.cpp
+[662/833] Compiling libraries/AP_RPM/RPM_Pin.cpp
+[664/833] Compiling libraries/AP_InertialNav/AP_InertialNav_NavEKF.cpp
+[664/833] Compiling libraries/GCS_MAVLink/GCS_serial_control.cpp
+[665/833] Compiling libraries/AP_VisualOdom/AP_VisualOdom_Backend.cpp
+[666/833] Compiling libraries/AP_Math/vector2.cpp
+[667/833] Compiling modules/uavcan/libuavcan/src/node/uc_generic_subscriber.cpp
+[668/833] Compiling libraries/AP_NavEKF2/AP_NavEKF2_RngBcnFusion.cpp
+[669/833] Compiling modules/uavcan/libuavcan/src/uc_error.cpp
+[670/833] Compiling libraries/AP_BattMonitor/AP_BattMonitor_Analog.cpp
+[671/833] Compiling libraries/AP_BattMonitor/AP_BattMonitor_Backend.cpp
+[672/833] Compiling libraries/AP_ServoRelayEvents/AP_ServoRelayEvents.cpp
+[673/833] Compiling libraries/AP_Motors/AP_MotorsTri.cpp
+[674/833] Compiling libraries/AP_Mission/AP_Mission.cpp
+[675/833] Compiling libraries/PID/PID.cpp
+[676/833] Compiling libraries/AP_NavEKF2/AP_NavEKF2_Control.cpp
+[677/833] Compiling libraries/APM_Control/AP_PitchController.cpp
+[678/833] Compiling libraries/AP_Common/AP_Common.cpp
+[679/833] Compiling libraries/AP_Math/polygon.cpp
+[680/833] Compiling libraries/AP_Mount/AP_Mount_SToRM32.cpp
+[681/833] Compiling libraries/Filter/NotchFilter.cpp
+[682/833] Compiling libraries/AP_Parachute/AP_Parachute.cpp
+[683/833] Compiling libraries/AP_NavEKF2/AP_NavEKF2_core.cpp
+[684/833] Compiling libraries/GCS_MAVLink/GCS_Common.cpp
+[685/833] Compiling libraries/AP_RangeFinder/RangeFinder_Backend.cpp
+[686/833] Compiling libraries/AP_TECS/AP_TECS.cpp
+[687/833] Compiling libraries/AP_HAL/HAL.cpp
+[688/833] Compiling libraries/APM_Control/AP_YawController.cpp
+[689/833] Compiling libraries/AP_Compass/AP_Compass.cpp
+[690/833] Compiling libraries/AP_Math/crc.cpp
+[691/833] Compiling libraries/AP_L1_Control/AP_L1_Control.cpp
+[692/833] Compiling libraries/AP_Mount/AP_Mount.cpp
+[693/833] Compiling libraries/AP_AHRS/examples/AHRS_Test/AHRS_Test.cpp
+[694/833] Compiling libraries/AP_HAL/Device.cpp
+[695/833] Compiling libraries/AP_LandingGear/AP_LandingGear.cpp
+[696/833] Compiling libraries/AP_Beacon/AP_Beacon_Marvelmind.cpp
+[697/833] Compiling libraries/AP_NavEKF3/AP_NavEKF3_GyroBias.cpp
+[698/833] Compiling libraries/AC_PrecLand/AC_PrecLand_Companion.cpp
+[699/833] Compiling libraries/AP_Airspeed/AP_Airspeed_analog.cpp
+[700/833] Compiling libraries/AP_Proximity/AP_Proximity_MAV.cpp
+[701/833] Compiling libraries/AP_Baro/AP_Baro_SITL.cpp
+[702/833] Compiling libraries/AP_Notify/OreoLED_PX4.cpp
+[703/833] Compiling libraries/AP_InertialSensor/BatchSampler.cpp
+[704/833] Compiling libraries/AP_OpticalFlow/OpticalFlow_backend.cpp
+[705/833] Compiling libraries/AP_HAL/utility/ftoa_engine.cpp
+[706/833] Compiling libraries/AP_InertialSensor/AP_InertialSensor_Backend.cpp
+[707/833] Compiling modules/uavcan/libuavcan/src/marshal/uc_bit_stream.cpp
+[708/833] Compiling libraries/AP_LeakDetector/AP_LeakDetector_Analog.cpp
+[709/833] Compiling libraries/AP_InertialSensor/AP_InertialSensor_L3G4200D.cpp
+[710/833] Compiling libraries/AP_NavEKF2/AP_NavEKF_GyroBias.cpp
+[711/833] Compiling modules/uavcan/libuavcan/src/protocol/uc_node_status_provider.cpp
+[712/833] Compiling libraries/AP_Proximity/AP_Proximity_RPLidarA2.cpp
+[713/833] Compiling libraries/AP_Arming/AP_Arming.cpp
+[714/833] Compiling libraries/AP_OpticalFlow/AP_OpticalFlow_Onboard.cpp
+[715/833] Compiling libraries/AP_TemperatureSensor/TSYS01.cpp
+[716/833] Compiling libraries/AP_Mount/AP_Mount_SoloGimbal.cpp
+[717/833] Compiling libraries/AP_GPS/AP_GPS_SBP2.cpp
+[718/833] Compiling libraries/AP_Compass/AP_Compass_Calibration.cpp
+[719/833] Compiling libraries/AP_Compass/AP_Compass_IST8310.cpp
+[720/833] Compiling libraries/AP_NavEKF3/AP_NavEKF3.cpp
+[721/833] Compiling libraries/AP_Compass/AP_Compass_QURT.cpp
+[722/833] Compiling libraries/AP_RangeFinder/AP_RangeFinder_Bebop.cpp
+[723/833] Compiling libraries/AP_RangeFinder/AP_RangeFinder_VL53L0X.cpp
+[724/833] Compiling libraries/AP_Mount/AP_Mount_Backend.cpp
+[725/833] Compiling libraries/AP_Notify/RCOutputRGBLed.cpp
+[726/833] Compiling libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp
+[727/833] Compiling libraries/AP_NavEKF2/AP_NavEKF2_AirDataFusion.cpp
+[728/833] Compiling libraries/AP_BattMonitor/AP_BattMonitor.cpp
+[729/833] Compiling libraries/AP_HAL_PX4/I2CDevice.cpp
+[730/833] Compiling libraries/AP_Compass/AP_Compass_UAVCAN.cpp
+[731/833] Compiling libraries/AP_IRLock/AP_IRLock_I2C.cpp
+[732/833] Compiling libraries/AP_HAL/utility/srxl.cpp
+[733/833] Compiling libraries/DataFlash/DFMessageWriter.cpp
+[734/833] Compiling libraries/AP_RangeFinder/AP_RangeFinder_MAVLink.cpp
+[735/833] Compiling libraries/AP_GPS/AP_GPS_GSOF.cpp
+[736/833] Compiling libraries/APM_Control/AP_SteerController.cpp
+[737/833] Compiling libraries/AP_Common/c++.cpp
+[738/833] Compiling libraries/AP_RSSI/AP_RSSI.cpp
+[739/833] Compiling libraries/AP_Notify/DiscoLED.cpp
+[740/833] Compiling libraries/AP_SmartRTL/AP_SmartRTL.cpp
+[741/833] Compiling libraries/AP_GPS/AP_GPS_UBLOX.cpp
+[742/833] Compiling libraries/AP_NavEKF2/AP_NavEKF2_Measurements.cpp
+[743/833] Compiling libraries/AP_Compass/AP_Compass_SITL.cpp
+[744/833] Compiling libraries/AP_BoardConfig/px4_drivers.cpp
+[745/833] Compiling libraries/AC_InputManager/AC_InputManager.cpp
+[746/833] Compiling libraries/AP_HAL/utility/utoa_invert.cpp
+[747/833] Compiling modules/uavcan/libuavcan/src/uc_data_type.cpp
+[748/833] Compiling libraries/AP_NavEKF2/AP_NavEKF2_MagFusion.cpp
+[749/833] Compiling libraries/AP_HAL_PX4/HAL_PX4_Class.cpp
+[750/833] Compiling libraries/AP_Motors/AP_MotorsHeli_Dual.cpp
+[751/833] Compiling libraries/AP_Notify/NavioLED_I2C.cpp
+[752/833] Compiling libraries/AP_AHRS/AP_AHRS.cpp
+[753/833] Compiling libraries/AC_PID/AC_PI_2D.cpp
+[754/833] Compiling libraries/AP_InertialSensor/AuxiliaryBus.cpp
+[755/833] Compiling modules/uavcan/libuavcan/src/transport/uc_crc.cpp
+[756/833] Compiling libraries/AP_Proximity/AP_Proximity_SITL.cpp
+[757/833] Compiling modules/uavcan/libuavcan/src/transport/uc_can_acceptance_filter_configurator.cpp
+[758/833] Compiling libraries/AP_OpticalFlow/AP_OpticalFlow_Pixart.cpp
+[759/833] Compiling libraries/AP_Notify/ToneAlarm_Linux.cpp
+[760/833] Compiling libraries/AP_RangeFinder/AP_RangeFinder_BBB_PRU.cpp
+[761/833] Compiling libraries/AP_HAL_PX4/AnalogIn.cpp
+[762/833] Compiling libraries/DataFlash/DataFlash.cpp
+[763/833] Compiling libraries/AP_Module/AP_Module.cpp
+[764/833] Compiling libraries/AP_GPS/AP_GPS_ERB.cpp
+[765/833] Compiling libraries/AP_Math/matrix3.cpp
+[766/833] Compiling modules/uavcan/libuavcan/src/transport/uc_outgoing_transfer_registry.cpp
+[767/833] Compiling libraries/AP_Math/matrixN.cpp
+[768/833] Compiling libraries/AP_InertialSensor/AP_InertialSensor.cpp
+[769/833] Compiling libraries/AP_Mount/SoloGimbal.cpp
+[770/833] Compiling libraries/AP_HAL_Empty/RCOutput.cpp
+[771/833] Compiling libraries/AP_Soaring/ExtendedKalmanFilter.cpp
+[772/833] Compiling libraries/DataFlash/DataFlash_File.cpp
+[773/833] Compiling libraries/AP_Param/AP_Param.cpp
+[774/833] Compiling libraries/StorageManager/StorageManager.cpp
+[775/833] Compiling libraries/AP_HAL/utility/dsm.cpp
+[776/833] Compiling libraries/AP_Baro/AP_Baro_qflight.cpp
+[777/833] Compiling libraries/AP_Baro/AP_Baro_MS5611.cpp
+[778/833] Compiling libraries/AP_Compass/AP_Compass_AK8963.cpp
+[779/833] Compiling modules/uavcan/libuavcan/src/node/uc_global_data_type_registry.cpp
+[780/833] Compiling libraries/AP_HAL/utility/getopt_cpp.cpp
+[781/833] Compiling libraries/GCS_MAVLink/GCS_DeviceOp.cpp
+[782/833] Compiling libraries/AP_Compass/Compass_learn.cpp
+[783/833] Compiling libraries/AP_Compass/AP_Compass_QMC5883L.cpp
+[784/833] Compiling libraries/AP_HAL_PX4/Storage.cpp
+[785/833] Compiling libraries/AP_Math/AP_GeodesicGrid.cpp
+[786/833] Compiling modules/uavcan/libuavcan/src/transport/uc_transfer_sender.cpp
+[787/833] Compiling libraries/AP_Math/matrix_alg.cpp
+[788/833] Compiling libraries/AP_InertialSensor/AP_InertialSensor_QURT.cpp
+[789/833] Compiling libraries/AP_Notify/ToshibaLED.cpp
+[790/833] Compiling libraries/AP_Baro/AP_Baro_BMP280.cpp
+[791/833] Compiling libraries/AP_HAL/utility/Print.cpp
+[792/833] Compiling libraries/AP_HAL_Empty/RCInput.cpp
+[793/833] Compiling libraries/AC_PID/AC_P.cpp
+[794/833] Compiling libraries/AP_RPM/AP_RPM.cpp
+[795/833] Compiling libraries/AC_PrecLand/AC_PrecLand_SITL.cpp
+[796/833] Compiling libraries/AP_HAL/utility/RCOutput_Tap_Linux.cpp
+[797/833] Compiling libraries/AP_Motors/AP_MotorsMulticopter.cpp
+[798/833] Compiling libraries/AP_Soaring/AP_Soaring.cpp
+[799/833] Compiling libraries/GCS_MAVLink/GCS.cpp
+[800/833] Compiling libraries/AC_Fence/AC_Fence.cpp
+[801/833] Compiling libraries/AP_LeakDetector/AP_LeakDetector_Digital.cpp
+[802/833] Compiling libraries/AP_Proximity/AP_Proximity.cpp
+[803/833] Compiling libraries/AP_Baro/AP_Baro_Backend.cpp
+[804/833] Compiling libraries/AP_WheelEncoder/WheelEncoder_Backend.cpp
+[805/833] Compiling libraries/AC_AttitudeControl/AC_AttitudeControl.cpp
+[806/833] Compiling modules/uavcan/libuavcan/src/transport/uc_transfer_listener.cpp
+[807/833] Compiling libraries/AP_Compass/AP_Compass_LIS3MDL.cpp
+[808/833] Compiling libraries/GCS_MAVLink/GCS_ServoRelay.cpp
+[809/833] Compiling libraries/AP_RPM/RPM_SITL.cpp
+[810/833] Compiling libraries/AP_AHRS/AP_AHRS_DCM.cpp
+[811/833] Compiling libraries/AC_WPNav/AC_Circle.cpp
+[812/833] Compiling modules/uavcan/libuavcan/src/transport/uc_transfer_buffer.cpp
+[813/833] Compiling libraries/AP_AHRS/AP_AHRS_NavEKF.cpp
+[814/833] Compiling libraries/AP_Airspeed/AP_Airspeed.cpp
+[815/833] Compiling libraries/AP_VisualOdom/AP_VisualOdom_MAV.cpp
+[816/833] Compiling libraries/AP_HAL_PX4/UARTDriver.cpp
+[817/833] Compiling libraries/AP_Beacon/AP_Beacon_Backend.cpp
+[818/833] Compiling libraries/AP_Math/vector3.cpp
+[819/833] Compiling libraries/AP_GPS/AP_GPS_SBP.cpp
+[820/833] Compiling libraries/AP_Camera/AP_Camera.cpp
+[821/833] Compiling libraries/AP_ADC/AP_ADC.cpp
+[822/833] Compiling libraries/AP_Mount/AP_Mount_Alexmos.cpp
+[823/833] Compiling modules/uavcan/libuavcan/src/node/uc_timer.cpp
+[824/833] Compiling libraries/AP_GPS/AP_GPS_QURT.cpp
+[825/833] Compiling libraries/AP_Airspeed/AP_Airspeed_MS4525.cpp
+[826/833] CMake Build px4 fw_io
+[1/31] Generating mixer_multirotor.generated.h[827/833] Linking build/px4-v2/lib/libap.a
+[828/833] Linking build/px4-v2/lib/examples/libAHRS_Test.a
+[3/31] Generating ../../../px4io-v2.export
+Configuring NuttX for px4io-v2
+Exporting NuttX for px4io-v2
+sem_timedwait.c: In function 'sem_timedwait':
+sem_timedwait.c:226:23: warning: comparison of unsigned expression < 0 is always false [-Wtype-limits]
+   if (abstime->tv_sec < 0 || abstime->tv_nsec > 1000000000)
+                       ^
+stdio/lib_printf.c: In function 'printf':
+stdio/lib_printf.c:96:9: warning: implicit declaration of function 'vsyslog' [-Wimplicit-function-declaration]
+   ret = vsyslog(fmt, ap);
+         ^
+stdio/lib_printf.c:96:3: warning: nested extern declaration of 'vsyslog' [-Wnested-externs]
+   ret = vsyslog(fmt, ap);
+   ^
+mm_memalign.c: In function 'mm_memalign':
+mm_memalign.c:106:14: warning: cast from function call of type 'void *' to non-matching type 'unsigned int' [-Wbad-function-cast]
+   rawchunk = (size_t)malloc(allocsize);
+              ^
+[31/31] Generating px4io-v2.bin
+[829/833] PX4: Copying px4io-v2 to px4-extra-files/px4io
+[830/833] PX4: Copying PX4IO to ROMFS px4-extra-files/ROMFS/px4io/px4io.bin
+[831/833] CMake Build px4 build_firmware_px4fmu-v2
+[10/112] Generating airframes.xml
+Scanning source path /Users/zbo/Git/ardupilot/modules/PX4Firmware/ROMFS/px4fmu_common/init.d
+Creating XML file airframes.xml
+All done!
+[19/112] Generating romfs.o
+Scanning source path /Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware/tmp/custom-ROMFS/init.d
+Creating start script /Users/zbo/Git/ardupilot/build/px4-v2/modules/PX4Firmware/tmp/custom-ROMFS/init.d/rc.autostart
+All done!
+Pruning ROMFS files.
+[36/112] Building CXX object src/drivers/pwm_input/CMakeFiles/drivers__pwm_input.dir/pwm_input.cpp.obj
+/Users/zbo/Git/ardupilot/modules/PX4Firmware/src/drivers/pwm_input/pwm_input.cpp: In constructor 'PWMIN::PWMIN()':
+/Users/zbo/Git/ardupilot/modules/PX4Firmware/src/drivers/pwm_input/pwm_input.cpp:267:17: warning: 'PWMIN::_perf_read' will be initialized after [-Wreorder]
+  perf_counter_t _perf_read;
+                 ^
+/Users/zbo/Git/ardupilot/modules/PX4Firmware/src/drivers/pwm_input/pwm_input.cpp:266:17: warning:   'perf_ctr_header* PWMIN::_perf_interrupt' [-Wreorder]
+  perf_counter_t _perf_interrupt;
+                 ^
+/Users/zbo/Git/ardupilot/modules/PX4Firmware/src/drivers/pwm_input/pwm_input.cpp:280:1: warning:   when initialized here [-Wreorder]
+ PWMIN::PWMIN() :
+ ^
+[88/112] Generating parameters.xml
+Scanning source path /Users/zbo/Git/ardupilot/modules/PX4Firmware/src
+Creating XML file parameters.xml
+All done!
+[112/112] Generating nuttx-px4fmu-v2-apm.px4
+[832/833] PX4: Copying firmware_nuttx to examples/AHRS_Test
+[833/833] PX4: Copying firmware and adding git hashes build/px4-v2/examples/AHRS_Test.px4
+Waf: Leaving directory `/Users/zbo/Git/ardupilot/build/px4-v2'
+
+BUILD SUMMARY
+Build directory: /Users/zbo/Git/ardupilot/build/px4-v2
+Target              Text    Data  BSS    Total
+-----------------------------------------------
+examples/AHRS_Test  616800  2756  45304  664860
+
+PX4
+The ELF files are pointed by the path in the "Target" column. The .px4 files are in
+the same directory of their corresponding ELF files.
+
+You can use the option --upload to upload the firmware to the PX4 board if you
+have one connected.
+
+PX4IO
+Binary                 Text   Data  BSS   Total
+-----------------------------------------------
+px4-extra-files/px4io  39672   600  3138  43410
+
+Build commands will be stored in build/px4-v2/compile_commands.json
+'build' finished successfully (3m22.075s)
+MacBook-Pro:ardupilot zbo$
