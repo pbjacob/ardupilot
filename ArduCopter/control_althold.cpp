@@ -6,10 +6,10 @@
  */
 
 // althold_init - initialise althold controller
-bool Copter::althold_init(bool ignore_checks)
+bool Copter::FlightMode_ALTHOLD::init(bool ignore_checks)
 {
     // initialize vertical speeds and leash lengths
-    pos_control->set_speed_z(-g.pilot_velocity_z_max, g.pilot_velocity_z_max);
+    pos_control->set_speed_z(-get_pilot_speed_dn(), g.pilot_speed_up);
     pos_control->set_accel_z(g.pilot_accel_z);
 
     // initialise position and desired velocity
@@ -26,13 +26,13 @@ bool Copter::althold_init(bool ignore_checks)
 
 // althold_run - runs the althold controller
 // should be called at 100hz or more
-void Copter::althold_run()
+void Copter::FlightMode_ALTHOLD::run()
 {
     AltHoldModeState althold_state;
     float takeoff_climb_rate = 0.0f;
 
     // initialize vertical speeds and acceleration
-    pos_control->set_speed_z(-g.pilot_velocity_z_max, g.pilot_velocity_z_max);
+    pos_control->set_speed_z(-get_pilot_speed_dn(), g.pilot_speed_up);
     pos_control->set_accel_z(g.pilot_accel_z);
 
     // apply SIMPLE mode transform to pilot inputs
@@ -47,7 +47,7 @@ void Copter::althold_run()
 
     // get pilot desired climb rate
     float target_climb_rate = get_pilot_desired_climb_rate(channel_throttle->get_control_in());
-    target_climb_rate = constrain_float(target_climb_rate, -g.pilot_velocity_z_max, g.pilot_velocity_z_max);
+    target_climb_rate = constrain_float(target_climb_rate, -get_pilot_speed_dn(), g.pilot_speed_up);
 
 #if FRAME_CONFIG == HELI_FRAME
     // helicopters are held on the ground until rotor speed runup has finished
@@ -149,14 +149,14 @@ void Copter::althold_run()
 
 #if AC_AVOID_ENABLED == ENABLED
         // apply avoidance
-        avoid.adjust_roll_pitch(target_roll, target_pitch, aparm.angle_max);
+        _copter.avoid.adjust_roll_pitch(target_roll, target_pitch, _copter.aparm.angle_max);
 #endif
 
         // call attitude controller
         attitude_control->input_euler_angle_roll_pitch_euler_rate_yaw(target_roll, target_pitch, target_yaw_rate, get_smoothing_gain());
 
         // adjust climb rate using rangefinder
-        if (rangefinder_alt_ok()) {
+        if (_copter.rangefinder_alt_ok()) {
             // if rangefinder is ok, use surface tracking
             target_climb_rate = get_surface_tracking_climb_rate(target_climb_rate, pos_control->get_alt_target(), G_Dt);
         }
