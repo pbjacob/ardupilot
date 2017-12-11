@@ -7,6 +7,7 @@
 #include <AP_HAL/AP_HAL.h>
 #include <AP_BoardConfig/AP_BoardConfig.h>
 #include <GCS_MAVLink/GCS_Dummy.h>
+#include <AP_Zbo/AP_Zbo.h>
 
 void setup();
 void loop();
@@ -93,6 +94,9 @@ void loop(void)
         last_print = now;
         counter = 0;
     }
+
+    float zbotest = 0.1;
+    test_zbo_func(zbotest);
 }
 
 const struct AP_Param::GroupInfo        GCS_MAVLINK::var_info[] = {
